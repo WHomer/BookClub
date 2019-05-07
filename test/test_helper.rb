@@ -1,3 +1,7 @@
+require 'simplecov'
+SimpleCov.start
+
+
 ENV['RAILS_ENV'] ||= 'test'
 require_relative '../config/environment'
 require 'rails/test_help'
@@ -7,4 +11,11 @@ class ActiveSupport::TestCase
   fixtures :all
 
   # Add more helper methods to be used by all tests here...
+end
+
+Shoulda::Matchers.configure do |c|
+  c.integrate do |with|
+    with.test_framework :rspec
+    with.library :rails
+  end
 end
