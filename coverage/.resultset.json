@@ -223,9 +223,14 @@
         null,
         1,
         1,
+        2,
+        2,
+        null,
         null
       ],
       "/Users/william/turing/2module/projects/BookClub/app/models/author.rb": [
+        1,
+        1,
         1,
         null
       ],
@@ -274,6 +279,6 @@
         null
       ]
     },
-    "timestamp": 1557264054
+    "timestamp": 1557264651
   }
 }
