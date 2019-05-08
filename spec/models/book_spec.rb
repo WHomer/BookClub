@@ -13,7 +13,7 @@ RSpec.describe Book, type: :model do
       meg.reviews.create!(title: 'It was only sucked', review: '2asdfasdfadsfadsfadfasdfa', rating: 1, book_id: hp_prisoner.id)
       meg.reviews.create!(title: 'It was only bad', review: '3asdfasdfadsfadsfadfasdfa', rating: 3, book_id: hp_prisoner.id)
       
-      expect(hp_prisoner.average_book_rating).to eq(2)
+      expect(hp_prisoner.average_book_rating.round).to eq(3)
     end
   end
 
