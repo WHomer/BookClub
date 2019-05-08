@@ -207,8 +207,7 @@
         1,
         null
       ],
-      "/Users/william/turing/2module/projects/BookClub/app/models/author_book.rb": [
-        1,
+      "/Users/william/turing/2module/projects/BookClub/app/models/book.rb": [
         1,
         1,
         null
@@ -218,59 +217,10 @@
         1,
         null
       ],
-      "/Users/william/turing/2module/projects/BookClub/spec/models/author_spec.rb": [
-        1,
-        null,
-        1,
-        1,
-        2,
-        2,
-        null,
-        null
-      ],
-      "/Users/william/turing/2module/projects/BookClub/app/models/author.rb": [
-        1,
-        1,
-        1,
-        null
-      ],
-      "/Users/william/turing/2module/projects/BookClub/spec/models/book_spec.rb": [
-        1,
-        null,
-        1,
-        1,
-        2,
-        null,
-        null
-      ],
-      "/Users/william/turing/2module/projects/BookClub/app/models/book.rb": [
-        1,
-        1,
-        null
-      ],
-      "/Users/william/turing/2module/projects/BookClub/spec/models/review_spec.rb": [
-        1,
-        null,
-        1,
-        1,
-        2,
-        2,
-        null,
-        null
-      ],
       "/Users/william/turing/2module/projects/BookClub/app/models/review.rb": [
         1,
         1,
         1,
-        null
-      ],
-      "/Users/william/turing/2module/projects/BookClub/spec/models/user_spec.rb": [
-        1,
-        null,
-        1,
-        1,
-        2,
-        null,
         null
       ],
       "/Users/william/turing/2module/projects/BookClub/app/models/user.rb": [
@@ -279,6 +229,6 @@
         null
       ]
     },
-    "timestamp": 1557264651
+    "timestamp": 1557350258
   }
 }
