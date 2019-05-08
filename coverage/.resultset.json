@@ -242,9 +242,6 @@
         1,
         null,
         null,
-        null,
-        null,
-        null,
         null
       ],
       "/Users/william/turing/2module/projects/BookClub/app/models/application_record.rb": [
@@ -264,6 +261,6 @@
         null
       ]
     },
-    "timestamp": 1557356741
+    "timestamp": 1557358181
   }
 }
