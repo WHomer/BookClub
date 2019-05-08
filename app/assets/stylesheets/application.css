@@ -13,3 +13,5 @@
  *= require_tree .
  *= require_self
  */
+
+ .book-title {background: rgba(97,97,97,0.8); padding-left: 5px; padding-right: 5px; font: 1vw sans-serif; max-width: 100%}
