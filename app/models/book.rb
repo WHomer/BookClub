@@ -33,6 +33,3 @@ class Book < ApplicationRecord
     end
   end
 end
-
-# - sorted by number of reviews in ascending order
-# - sorted by number of reviews in descending order
