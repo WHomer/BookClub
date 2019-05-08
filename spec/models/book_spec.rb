@@ -27,8 +27,8 @@ RSpec.describe Book, type: :model do
     end
 
     it '.sort_average_rating' do
-      expect(Book.sort_average_rating('ASC')).to eq([@hp_sorcerer, @hp_prisoner, @hp_chamber]) 
-      expect(Book.sort_average_rating('DESC')).to eq([@hp_chamber, @hp_prisoner, @hp_sorcerer]) 
+      expect(Book.sort_average_rating('ASC')).to eq([@hp_chamber, @hp_sorcerer, @hp_prisoner]) 
+      expect(Book.sort_average_rating('DESC')).to eq([@hp_prisoner, @hp_sorcerer, @hp_chamber]) 
     end
 
     it '.sort_number_of_pages' do

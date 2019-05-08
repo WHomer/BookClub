@@ -11,9 +11,9 @@ class Book < ApplicationRecord
 
   def self.sort_average_rating(order)
     if order.upcase == 'ASC' || order.upcase == 'ASCENDING'
-      select('books.*, avg(reviews.rating) as average_rating').left_joins(:reviews).group('books.id').order('average_rating ASC')
+      select('books.*, COALESCE(AVG(reviews.rating), 0) as average_rating').left_joins(:reviews).group('books.id').order('average_rating ASC')
     elsif order.upcase == 'DESC' || order.upcase == 'DESCENDING'  
-      select('books.*, avg(reviews.rating) as average_rating').left_joins(:reviews).group('books.id').order('average_rating DESC')
+      select('books.*, COALESCE(avg(reviews.rating), 0) as average_rating').left_joins(:reviews).group('books.id').order('average_rating DESC')
     end
   end
 
