@@ -207,6 +207,92 @@
         1,
         null
       ],
+      "/Users/william/turing/2module/projects/BookClub/app/models/author_book.rb": [
+        1,
+        1,
+        1,
+        null
+      ],
+      "/Users/william/turing/2module/projects/BookClub/app/models/application_record.rb": [
+        1,
+        1,
+        null
+      ],
+      "/Users/william/turing/2module/projects/BookClub/spec/models/author_spec.rb": [
+        1,
+        null,
+        1,
+        1,
+        2,
+        2,
+        null,
+        null
+      ],
+      "/Users/william/turing/2module/projects/BookClub/app/models/author.rb": [
+        1,
+        1,
+        1,
+        null
+      ],
+      "/Users/william/turing/2module/projects/BookClub/spec/models/book_spec.rb": [
+        1,
+        null,
+        1,
+        1,
+        2,
+        null,
+        null,
+        1,
+        1,
+        6,
+        6,
+        6,
+        6,
+        6,
+        6,
+        6,
+        6,
+        6,
+        6,
+        6,
+        6,
+        6,
+        6,
+        null,
+        null,
+        1,
+        1,
+        null,
+        null,
+        1,
+        1,
+        null,
+        null,
+        1,
+        1,
+        1,
+        null,
+        null,
+        1,
+        1,
+        1,
+        null,
+        null,
+        1,
+        1,
+        1,
+        null,
+        null,
+        1,
+        1,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null
+      ],
       "/Users/william/turing/2module/projects/BookClub/app/models/book.rb": [
         1,
         1,
@@ -242,11 +328,20 @@
         1,
         null,
         null,
+        null,
+        1,
+        1,
+        null,
         null
       ],
-      "/Users/william/turing/2module/projects/BookClub/app/models/application_record.rb": [
+      "/Users/william/turing/2module/projects/BookClub/spec/models/review_spec.rb": [
+        1,
+        null,
         1,
         1,
+        2,
+        2,
+        null,
         null
       ],
       "/Users/william/turing/2module/projects/BookClub/app/models/review.rb": [
@@ -255,12 +350,21 @@
         1,
         null
       ],
+      "/Users/william/turing/2module/projects/BookClub/spec/models/user_spec.rb": [
+        1,
+        null,
+        1,
+        1,
+        2,
+        null,
+        null
+      ],
       "/Users/william/turing/2module/projects/BookClub/app/models/user.rb": [
         1,
         1,
         null
       ]
     },
-    "timestamp": 1557359786
+    "timestamp": 1557423488
   }
 }
