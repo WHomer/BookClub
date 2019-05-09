@@ -9,6 +9,14 @@ class Book < ApplicationRecord
     reviews.count
   end
 
+  def top_three_reviews
+    reviews.order('rating DESC, id ASC').limit(3)
+  end
+
+  def bottom_three_reviews
+    reviews.order('rating ASC, id ASC').limit(3)
+  end
+
   def self.sort_average_rating(order)
     if order.upcase == 'ASC' || order.upcase == 'ASCENDING'
       select('books.*, COALESCE(AVG(reviews.rating), 0) as average_rating').left_joins(:reviews).group('books.id').order('average_rating ASC, books.title ASC')
@@ -42,7 +50,7 @@ class Book < ApplicationRecord
   end
 
   def self.stat_three_users_most_reviews
-    User.select('users.*, count(reviews.id) as review_count').left_joins(:reviews).group('users.id').order('users.id ASC').limit(3)
+    User.select('users.*, count(reviews.id) as review_count').left_joins(:reviews).group('users.id').order('review_count DESC, users.id ASC').limit(3)
   end
 
 end

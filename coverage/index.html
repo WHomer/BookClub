@@ -5,7 +5,7 @@
     <meta http-equiv="content-type" content="text/html; charset=utf-8" />
     <script src='./assets/0.10.2/application.js' type='text/javascript'></script>    
     <link href='./assets/0.10.2/application.css' media='screen, projection, print' rel='stylesheet' type='text/css'>
-    <link rel="shortcut icon" type="image/png" href="./assets/0.10.2/favicon_red.png" />
+    <link rel="shortcut icon" type="image/png" href="./assets/0.10.2/favicon_green.png" />
     <link rel="icon" type="image/png" href="./assets/0.10.2/favicon.png" />
   </head>
   
@@ -14,27 +14,27 @@
       <img src="./assets/0.10.2/loading.gif" alt="loading"/>
     </div>
     <div id="wrapper" style="display:none;">
-      <div class="timestamp">Generated <abbr class="timeago" title="2019-05-09T13:44:39-06:00">2019-05-09T13:44:39-06:00</abbr></div>
+      <div class="timestamp">Generated <abbr class="timeago" title="2019-05-09T15:05:19-06:00">2019-05-09T15:05:19-06:00</abbr></div>
       <ul class="group_tabs"></ul>
 
       <div id="content">
         <div class="file_list_container" id="AllFiles">
   <h2>
     <span class="group_name">All Files</span>
-    (<span class="covered_percent"><span class="red">76.12%</span></span>
+    (<span class="covered_percent"><span class="green">100.0%</span></span>
      covered at
      <span class="covered_strength">
-       <span class="red">
-         0.77
+       <span class="green">
+         2.18
        </span>
     </span> hits/line)
   </h2>
   <a name="AllFiles"></a>
   <div>
-    <b>19</b> files in total.
-    <b>67</b> relevant lines. 
-    <span class="green"><b>51</b> lines covered</span> and
-    <span class="red"><b>16</b> lines missed </span>
+    <b>25</b> files in total.
+    <b>137</b> relevant lines. 
+    <span class="green"><b>137</b> lines covered</span> and
+    <span class="red"><b>0</b> lines missed </span>
   </div>
   <table class="file_list">
     <thead>
@@ -71,13 +71,33 @@
       </tr>
       
       <tr>
+        <td class="strong"><a href="#56f8dbb6e5288b0f11ab0544019582e61209d8d2" class="src_link" title="app/models/author.rb">app/models/author.rb</a></td>
+        <td class="green strong">100.0 %</td>
+        <td>4</td>
+        <td>3</td>
+        <td>3</td>
+        <td>0</td>
+        <td>1.0</td>
+      </tr>
+      
+      <tr>
+        <td class="strong"><a href="#fd524c47d04684d3bb2c17cce803606159b05728" class="src_link" title="app/models/author_book.rb">app/models/author_book.rb</a></td>
+        <td class="green strong">100.0 %</td>
+        <td>4</td>
+        <td>3</td>
+        <td>3</td>
+        <td>0</td>
+        <td>1.0</td>
+      </tr>
+      
+      <tr>
         <td class="strong"><a href="#c84bb064461e22bc2a1edeeb51a6869a296296d8" class="src_link" title="app/models/book.rb">app/models/book.rb</a></td>
-        <td class="red strong">40.74 %</td>
-        <td>48</td>
-        <td>27</td>
-        <td>11</td>
-        <td>16</td>
-        <td>0.4</td>
+        <td class="green strong">100.0 %</td>
+        <td>56</td>
+        <td>31</td>
+        <td>31</td>
+        <td>0</td>
+        <td>1.1</td>
       </tr>
       
       <tr>
@@ -240,6 +260,46 @@
         <td>1.0</td>
       </tr>
       
+      <tr>
+        <td class="strong"><a href="#f623cbec7941c1a601193fdf56b2d4a1e84225eb" class="src_link" title="spec/models/author_spec.rb">spec/models/author_spec.rb</a></td>
+        <td class="green strong">100.0 %</td>
+        <td>8</td>
+        <td>5</td>
+        <td>5</td>
+        <td>0</td>
+        <td>1.4</td>
+      </tr>
+      
+      <tr>
+        <td class="strong"><a href="#207bd7d226c01846079408f75d5a0ee2d73f0278" class="src_link" title="spec/models/book_spec.rb">spec/models/book_spec.rb</a></td>
+        <td class="green strong">100.0 %</td>
+        <td>75</td>
+        <td>46</td>
+        <td>46</td>
+        <td>0</td>
+        <td>4.3</td>
+      </tr>
+      
+      <tr>
+        <td class="strong"><a href="#3798c3f7b94afa580a052531b176596bace2bc9e" class="src_link" title="spec/models/review_spec.rb">spec/models/review_spec.rb</a></td>
+        <td class="green strong">100.0 %</td>
+        <td>8</td>
+        <td>5</td>
+        <td>5</td>
+        <td>0</td>
+        <td>1.4</td>
+      </tr>
+      
+      <tr>
+        <td class="strong"><a href="#72ba4c40d250a18294a38ae59834890eef9d24bc" class="src_link" title="spec/models/user_spec.rb">spec/models/user_spec.rb</a></td>
+        <td class="green strong">100.0 %</td>
+        <td>7</td>
+        <td>4</td>
+        <td>4</td>
+        <td>0</td>
+        <td>1.3</td>
+      </tr>
+      
     </tbody>
   </table>
 </div>
@@ -324,14 +384,100 @@
 </div>
 
       
+        <div class="source_table" id="56f8dbb6e5288b0f11ab0544019582e61209d8d2">
+  <div class="header">
+    <h3>app/models/author.rb</h3>
+    <h4><span class="green">100.0 %</span> covered</h4>
+    <div>
+      <b>3</b> relevant lines. 
+      <span class="green"><b>3</b> lines covered</span> and
+      <span class="red"><b>0</b> lines missed.</span>
+    </div>
+  </div>
+  
+  <pre>
+    <ol>
+      
+        <li class="covered" data-hits="1" data-linenumber="1">
+          <span class="hits">1</span>
+          
+          <code class="ruby">class Author &lt; ApplicationRecord</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="2">
+          <span class="hits">1</span>
+          
+          <code class="ruby">  has_many :author_books</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="3">
+          <span class="hits">1</span>
+          
+          <code class="ruby">  has_many :books, through: :author_books</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="4">
+          
+          
+          <code class="ruby">end</code>
+        </li>
+      
+    </ol>
+  </pre>
+</div>
+
+      
+        <div class="source_table" id="fd524c47d04684d3bb2c17cce803606159b05728">
+  <div class="header">
+    <h3>app/models/author_book.rb</h3>
+    <h4><span class="green">100.0 %</span> covered</h4>
+    <div>
+      <b>3</b> relevant lines. 
+      <span class="green"><b>3</b> lines covered</span> and
+      <span class="red"><b>0</b> lines missed.</span>
+    </div>
+  </div>
+  
+  <pre>
+    <ol>
+      
+        <li class="covered" data-hits="1" data-linenumber="1">
+          <span class="hits">1</span>
+          
+          <code class="ruby">class AuthorBook &lt; ApplicationRecord</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="2">
+          <span class="hits">1</span>
+          
+          <code class="ruby">  belongs_to :author</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="3">
+          <span class="hits">1</span>
+          
+          <code class="ruby">  belongs_to :book</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="4">
+          
+          
+          <code class="ruby">end</code>
+        </li>
+      
+    </ol>
+  </pre>
+</div>
+
+      
         <div class="source_table" id="c84bb064461e22bc2a1edeeb51a6869a296296d8">
   <div class="header">
     <h3>app/models/book.rb</h3>
-    <h4><span class="red">40.74 %</span> covered</h4>
+    <h4><span class="green">100.0 %</span> covered</h4>
     <div>
-      <b>27</b> relevant lines. 
-      <span class="green"><b>11</b> lines covered</span> and
-      <span class="red"><b>16</b> lines missed.</span>
+      <b>31</b> relevant lines. 
+      <span class="green"><b>31</b> lines covered</span> and
+      <span class="red"><b>0</b> lines missed.</span>
     </div>
   </div>
   
@@ -362,8 +508,8 @@
           <code class="ruby">  def average_book_rating</code>
         </li>
       
-        <li class="missed" data-hits="0" data-linenumber="5">
-          
+        <li class="covered" data-hits="1" data-linenumber="5">
+          <span class="hits">1</span>
           
           <code class="ruby">    reviews.average(:rating)</code>
         </li>
@@ -386,8 +532,8 @@
           <code class="ruby">  def count_book_reviews</code>
         </li>
       
-        <li class="missed" data-hits="0" data-linenumber="9">
-          
+        <li class="covered" data-hits="1" data-linenumber="9">
+          <span class="hits">1</span>
           
           <code class="ruby">    reviews.count</code>
         </li>
@@ -407,37 +553,37 @@
         <li class="covered" data-hits="1" data-linenumber="12">
           <span class="hits">1</span>
           
-          <code class="ruby">  def self.sort_average_rating(order)</code>
+          <code class="ruby">  def top_three_reviews</code>
         </li>
       
-        <li class="missed" data-hits="0" data-linenumber="13">
+        <li class="covered" data-hits="1" data-linenumber="13">
+          <span class="hits">1</span>
           
-          
-          <code class="ruby">    if order.upcase == &#39;ASC&#39; || order.upcase == &#39;ASCENDING&#39;</code>
+          <code class="ruby">    reviews.order(&#39;rating DESC, id ASC&#39;).limit(3)</code>
         </li>
       
-        <li class="missed" data-hits="0" data-linenumber="14">
+        <li class="never" data-hits="" data-linenumber="14">
           
           
-          <code class="ruby">      select(&#39;books.*, COALESCE(AVG(reviews.rating), 0) as average_rating&#39;).left_joins(:reviews).group(&#39;books.id&#39;).order(&#39;average_rating ASC, books.title ASC&#39;)</code>
+          <code class="ruby">  end</code>
         </li>
       
-        <li class="missed" data-hits="0" data-linenumber="15">
+        <li class="never" data-hits="" data-linenumber="15">
           
           
-          <code class="ruby">    elsif order.upcase == &#39;DESC&#39; || order.upcase == &#39;DESCENDING&#39;  </code>
+          <code class="ruby"></code>
         </li>
       
-        <li class="missed" data-hits="0" data-linenumber="16">
+        <li class="covered" data-hits="1" data-linenumber="16">
+          <span class="hits">1</span>
           
-          
-          <code class="ruby">      select(&#39;books.*, COALESCE(avg(reviews.rating), 0) as average_rating&#39;).left_joins(:reviews).group(&#39;books.id&#39;).order(&#39;average_rating DESC, books.title ASC&#39;)</code>
+          <code class="ruby">  def bottom_three_reviews</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="17">
+        <li class="covered" data-hits="1" data-linenumber="17">
+          <span class="hits">1</span>
           
-          
-          <code class="ruby">    end</code>
+          <code class="ruby">    reviews.order(&#39;rating ASC, id ASC&#39;).limit(3)</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="18">
@@ -455,31 +601,31 @@
         <li class="covered" data-hits="1" data-linenumber="20">
           <span class="hits">1</span>
           
-          <code class="ruby">  def self.sort_number_pages(order)</code>
+          <code class="ruby">  def self.sort_average_rating(order)</code>
         </li>
       
-        <li class="missed" data-hits="0" data-linenumber="21">
-          
+        <li class="covered" data-hits="2" data-linenumber="21">
+          <span class="hits">2</span>
           
           <code class="ruby">    if order.upcase == &#39;ASC&#39; || order.upcase == &#39;ASCENDING&#39;</code>
         </li>
       
-        <li class="missed" data-hits="0" data-linenumber="22">
+        <li class="covered" data-hits="1" data-linenumber="22">
+          <span class="hits">1</span>
           
-          
-          <code class="ruby">      select(&#39;books.*&#39;).order(&#39;books.page_count ASC, books.title ASC&#39;)</code>
+          <code class="ruby">      select(&#39;books.*, COALESCE(AVG(reviews.rating), 0) as average_rating&#39;).left_joins(:reviews).group(&#39;books.id&#39;).order(&#39;average_rating ASC, books.title ASC&#39;)</code>
         </li>
       
-        <li class="missed" data-hits="0" data-linenumber="23">
+        <li class="covered" data-hits="1" data-linenumber="23">
+          <span class="hits">1</span>
           
-          
-          <code class="ruby">    elsif order.upcase == &#39;DESC&#39; || order.upcase == &#39;DESCENDING&#39;</code>
+          <code class="ruby">    elsif order.upcase == &#39;DESC&#39; || order.upcase == &#39;DESCENDING&#39;  </code>
         </li>
       
-        <li class="missed" data-hits="0" data-linenumber="24">
+        <li class="covered" data-hits="1" data-linenumber="24">
+          <span class="hits">1</span>
           
-          
-          <code class="ruby">      select(&#39;books.*&#39;).order(&#39;books.page_count DESC, books.title ASC&#39;)</code>
+          <code class="ruby">      select(&#39;books.*, COALESCE(avg(reviews.rating), 0) as average_rating&#39;).left_joins(:reviews).group(&#39;books.id&#39;).order(&#39;average_rating DESC, books.title ASC&#39;)</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="25">
@@ -503,31 +649,31 @@
         <li class="covered" data-hits="1" data-linenumber="28">
           <span class="hits">1</span>
           
-          <code class="ruby">  def self.sort_number_reviews(order)</code>
+          <code class="ruby">  def self.sort_number_pages(order)</code>
         </li>
       
-        <li class="missed" data-hits="0" data-linenumber="29">
-          
+        <li class="covered" data-hits="2" data-linenumber="29">
+          <span class="hits">2</span>
           
           <code class="ruby">    if order.upcase == &#39;ASC&#39; || order.upcase == &#39;ASCENDING&#39;</code>
         </li>
       
-        <li class="missed" data-hits="0" data-linenumber="30">
+        <li class="covered" data-hits="1" data-linenumber="30">
+          <span class="hits">1</span>
           
-          
-          <code class="ruby">      select(&#39;books.*, count(reviews.rating) as count_rating&#39;).left_joins(:reviews).group(&#39;books.id&#39;).order(&#39;count_rating ASC, books.title ASC&#39;)</code>
+          <code class="ruby">      select(&#39;books.*&#39;).order(&#39;books.page_count ASC, books.title ASC&#39;)</code>
         </li>
       
-        <li class="missed" data-hits="0" data-linenumber="31">
+        <li class="covered" data-hits="1" data-linenumber="31">
+          <span class="hits">1</span>
           
-          
-          <code class="ruby">    elsif order.upcase == &#39;DESC&#39; || order.upcase == &#39;DESC&#39;</code>
+          <code class="ruby">    elsif order.upcase == &#39;DESC&#39; || order.upcase == &#39;DESCENDING&#39;</code>
         </li>
       
-        <li class="missed" data-hits="0" data-linenumber="32">
+        <li class="covered" data-hits="1" data-linenumber="32">
+          <span class="hits">1</span>
           
-          
-          <code class="ruby">      select(&#39;books.*, count(reviews.rating) as count_rating&#39;).left_joins(:reviews).group(&#39;books.id&#39;).order(&#39;count_rating DESC, books.title ASC&#39;)</code>
+          <code class="ruby">      select(&#39;books.*&#39;).order(&#39;books.page_count DESC, books.title ASC&#39;)</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="33">
@@ -551,37 +697,37 @@
         <li class="covered" data-hits="1" data-linenumber="36">
           <span class="hits">1</span>
           
-          <code class="ruby">  def self.stat_three_best_rated</code>
+          <code class="ruby">  def self.sort_number_reviews(order)</code>
         </li>
       
-        <li class="missed" data-hits="0" data-linenumber="37">
+        <li class="covered" data-hits="2" data-linenumber="37">
+          <span class="hits">2</span>
           
-          
-          <code class="ruby">    select(&#39;books.*, COALESCE(avg(reviews.rating), 0) as average_rating&#39;).left_joins(:reviews).group(&#39;books.id&#39;).order(&#39;average_rating DESC, books.title ASC&#39;).limit(3)</code>
+          <code class="ruby">    if order.upcase == &#39;ASC&#39; || order.upcase == &#39;ASCENDING&#39;</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="38">
+        <li class="covered" data-hits="1" data-linenumber="38">
+          <span class="hits">1</span>
           
-          
-          <code class="ruby">  end</code>
+          <code class="ruby">      select(&#39;books.*, count(reviews.rating) as count_rating&#39;).left_joins(:reviews).group(&#39;books.id&#39;).order(&#39;count_rating ASC, books.title ASC&#39;)</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="39">
+        <li class="covered" data-hits="1" data-linenumber="39">
+          <span class="hits">1</span>
           
-          
-          <code class="ruby"></code>
+          <code class="ruby">    elsif order.upcase == &#39;DESC&#39; || order.upcase == &#39;DESC&#39;</code>
         </li>
       
         <li class="covered" data-hits="1" data-linenumber="40">
           <span class="hits">1</span>
           
-          <code class="ruby">  def self.stat_three_worst_rated</code>
+          <code class="ruby">      select(&#39;books.*, count(reviews.rating) as count_rating&#39;).left_joins(:reviews).group(&#39;books.id&#39;).order(&#39;count_rating DESC, books.title ASC&#39;)</code>
         </li>
       
-        <li class="covered" data-hits="1" data-linenumber="41">
-          <span class="hits">1</span>
+        <li class="never" data-hits="" data-linenumber="41">
           
-          <code class="ruby">    select(&#39;books.*, COALESCE(avg(reviews.rating), 0) as average_rating&#39;).left_joins(:reviews).group(&#39;books.id&#39;).order(&#39;average_rating ASC, books.title ASC&#39;).limit(3)</code>
+          
+          <code class="ruby">    end</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="42">
@@ -599,13 +745,13 @@
         <li class="covered" data-hits="1" data-linenumber="44">
           <span class="hits">1</span>
           
-          <code class="ruby">  def self.stat_three_users_most_reviews</code>
+          <code class="ruby">  def self.stat_three_best_rated</code>
         </li>
       
-        <li class="missed" data-hits="0" data-linenumber="45">
+        <li class="covered" data-hits="1" data-linenumber="45">
+          <span class="hits">1</span>
           
-          
-          <code class="ruby">    User.select(&#39;users.*, count(reviews.id) as review_count&#39;).left_joins(:reviews).group(&#39;users.id&#39;).order(&#39;users.id ASC&#39;).limit(3)</code>
+          <code class="ruby">    select(&#39;books.*, COALESCE(avg(reviews.rating), 0) as average_rating&#39;).left_joins(:reviews).group(&#39;books.id&#39;).order(&#39;average_rating DESC, books.title ASC&#39;).limit(3)</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="46">
@@ -620,7 +766,55 @@
           <code class="ruby"></code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="48">
+        <li class="covered" data-hits="1" data-linenumber="48">
+          <span class="hits">1</span>
+          
+          <code class="ruby">  def self.stat_three_worst_rated</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="49">
+          <span class="hits">1</span>
+          
+          <code class="ruby">    select(&#39;books.*, COALESCE(avg(reviews.rating), 0) as average_rating&#39;).left_joins(:reviews).group(&#39;books.id&#39;).order(&#39;average_rating ASC, books.title ASC&#39;).limit(3)</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="50">
+          
+          
+          <code class="ruby">  end</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="51">
+          
+          
+          <code class="ruby"></code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="52">
+          <span class="hits">1</span>
+          
+          <code class="ruby">  def self.stat_three_users_most_reviews</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="53">
+          <span class="hits">1</span>
+          
+          <code class="ruby">    User.select(&#39;users.*, count(reviews.id) as review_count&#39;).left_joins(:reviews).group(&#39;users.id&#39;).order(&#39;review_count DESC, users.id ASC&#39;).limit(3)</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="54">
+          
+          
+          <code class="ruby">  end</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="55">
+          
+          
+          <code class="ruby"></code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="56">
           
           
           <code class="ruby">end</code>
@@ -2011,6 +2205,670 @@
         </li>
       
         <li class="never" data-hits="" data-linenumber="3">
+          
+          
+          <code class="ruby">end</code>
+        </li>
+      
+    </ol>
+  </pre>
+</div>
+
+      
+        <div class="source_table" id="f623cbec7941c1a601193fdf56b2d4a1e84225eb">
+  <div class="header">
+    <h3>spec/models/author_spec.rb</h3>
+    <h4><span class="green">100.0 %</span> covered</h4>
+    <div>
+      <b>5</b> relevant lines. 
+      <span class="green"><b>5</b> lines covered</span> and
+      <span class="red"><b>0</b> lines missed.</span>
+    </div>
+  </div>
+  
+  <pre>
+    <ol>
+      
+        <li class="covered" data-hits="1" data-linenumber="1">
+          <span class="hits">1</span>
+          
+          <code class="ruby">require &#39;rails_helper&#39;</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="2">
+          
+          
+          <code class="ruby"></code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="3">
+          <span class="hits">1</span>
+          
+          <code class="ruby">RSpec.describe Author, type: :model do</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="4">
+          <span class="hits">1</span>
+          
+          <code class="ruby">  describe &#39;relationships&#39; do</code>
+        </li>
+      
+        <li class="covered" data-hits="2" data-linenumber="5">
+          <span class="hits">2</span>
+          
+          <code class="ruby">    it {should have_many :author_books}</code>
+        </li>
+      
+        <li class="covered" data-hits="2" data-linenumber="6">
+          <span class="hits">2</span>
+          
+          <code class="ruby">    it {should have_many(:books).through(:author_books)}</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="7">
+          
+          
+          <code class="ruby">  end</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="8">
+          
+          
+          <code class="ruby">end</code>
+        </li>
+      
+    </ol>
+  </pre>
+</div>
+
+      
+        <div class="source_table" id="207bd7d226c01846079408f75d5a0ee2d73f0278">
+  <div class="header">
+    <h3>spec/models/book_spec.rb</h3>
+    <h4><span class="green">100.0 %</span> covered</h4>
+    <div>
+      <b>46</b> relevant lines. 
+      <span class="green"><b>46</b> lines covered</span> and
+      <span class="red"><b>0</b> lines missed.</span>
+    </div>
+  </div>
+  
+  <pre>
+    <ol>
+      
+        <li class="covered" data-hits="1" data-linenumber="1">
+          <span class="hits">1</span>
+          
+          <code class="ruby">require &#39;rails_helper&#39;</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="2">
+          
+          
+          <code class="ruby"></code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="3">
+          <span class="hits">1</span>
+          
+          <code class="ruby">RSpec.describe Book, type: :model do</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="4">
+          <span class="hits">1</span>
+          
+          <code class="ruby">  describe &#39;relationships&#39; do</code>
+        </li>
+      
+        <li class="covered" data-hits="2" data-linenumber="5">
+          <span class="hits">2</span>
+          
+          <code class="ruby">    it {should have_many :reviews}</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="6">
+          
+          
+          <code class="ruby">  end</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="7">
+          
+          
+          <code class="ruby"></code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="8">
+          <span class="hits">1</span>
+          
+          <code class="ruby">  describe &#39;instance variables&#39; do</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="9">
+          <span class="hits">1</span>
+          
+          <code class="ruby">    before :each do</code>
+        </li>
+      
+        <li class="covered" data-hits="10" data-linenumber="10">
+          <span class="hits">10</span>
+          
+          <code class="ruby">      @peter = User.create!(username: &#39;Peter Griffen&#39;)</code>
+        </li>
+      
+        <li class="covered" data-hits="10" data-linenumber="11">
+          <span class="hits">10</span>
+          
+          <code class="ruby">      @brian = User.create!(username: &#39;Brian Griffen&#39;)</code>
+        </li>
+      
+        <li class="covered" data-hits="10" data-linenumber="12">
+          <span class="hits">10</span>
+          
+          <code class="ruby">      @meg  = User.create!(username: &#39;Meg Griffen&#39;)</code>
+        </li>
+      
+        <li class="covered" data-hits="10" data-linenumber="13">
+          <span class="hits">10</span>
+          
+          <code class="ruby">      @joe = User.create!(username: &#39;Joe Swanson&#39;)</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="14">
+          
+          
+          <code class="ruby">      </code>
+        </li>
+      
+        <li class="covered" data-hits="10" data-linenumber="15">
+          <span class="hits">10</span>
+          
+          <code class="ruby">      @hp_prisoner = Book.create!(title: &quot;Harry Potter and the Prisoner of Azkaban&quot;, page_count: 1234 , year_published: &quot;2010-01-01&quot; , image_url: &quot;https://pics.cdn.librarything.com/picsizes/dd/b9/ddb96bc09edd9c6593241315251434f414f4141.jpg&quot; )</code>
+        </li>
+      
+        <li class="covered" data-hits="10" data-linenumber="16">
+          <span class="hits">10</span>
+          
+          <code class="ruby">      @hp_sorcerer = Book.create!(title: &quot;Harry Potter and the Sorcerer&#39;s Stone&quot;, page_count: 903 , year_published: &quot;2019-05-08&quot; , image_url: &quot;https://pics.cdn.librarything.com/picsizes/bd/73/bd73e9ebf18b34a593551665267434f414f4141.jpg&quot; )</code>
+        </li>
+      
+        <li class="covered" data-hits="10" data-linenumber="17">
+          <span class="hits">10</span>
+          
+          <code class="ruby">      @hp_chamber = Book.create!(title: &quot;Harry Potter and the Chamber of Secrets&quot;, page_count: 234 , year_published: &quot;2009-01-01&quot; , image_url: &quot;https://pics.cdn.librarything.com/picsizes/d9/d1/d9d13615817b9be593272635351434f414f4141.jpg&quot; )</code>
+        </li>
+      
+        <li class="covered" data-hits="10" data-linenumber="18">
+          <span class="hits">10</span>
+          
+          <code class="ruby">      @hp_half = Book.create!(title: &quot;Harry Potter and the Half-Blood Prince&quot;, page_count: 432 , year_published: &quot;2011-01-01&quot; , image_url: &quot;https://pics.cdn.librarything.com/picsizes/c3/7f/c37f9cd35eeb1065930546a5251434f414f4141.jpg&quot; )</code>
+        </li>
+      
+        <li class="covered" data-hits="10" data-linenumber="19">
+          <span class="hits">10</span>
+          
+          <code class="ruby">      @hp_order = Book.create!(title: &quot;Harry Potter and the Order of the Phoenix&quot;, page_count: 543 , year_published: &quot;2012-01-01&quot; , image_url: &quot;https://pics.cdn.librarything.com/picsizes/ef/59/ef59930168456ea593072765351434f414f4141.jpg&quot; )</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="20">
+          
+          
+          <code class="ruby">      </code>
+        </li>
+      
+        <li class="covered" data-hits="10" data-linenumber="21">
+          <span class="hits">10</span>
+          
+          <code class="ruby">      @review_1 = @meg.reviews.create!(title: &#39;It was only OK&#39;, review: &#39;1asdfasdfadsfadsfadfasdfa&#39;, rating: 4, book_id: @hp_prisoner.id)</code>
+        </li>
+      
+        <li class="covered" data-hits="10" data-linenumber="22">
+          <span class="hits">10</span>
+          
+          <code class="ruby">      @review_2 = @meg.reviews.create!(title: &#39;It was only OK&#39;, review: &#39;1asdfasdfadsfadsfadfasdfa&#39;, rating: 4, book_id: @hp_prisoner.id)</code>
+        </li>
+      
+        <li class="covered" data-hits="10" data-linenumber="23">
+          <span class="hits">10</span>
+          
+          <code class="ruby">      @review_3 = @meg.reviews.create!(title: &#39;It was only sucked&#39;, review: &#39;2asdfasdfadsfadsfadfasdfa&#39;, rating: 1, book_id: @hp_prisoner.id)</code>
+        </li>
+      
+        <li class="covered" data-hits="10" data-linenumber="24">
+          <span class="hits">10</span>
+          
+          <code class="ruby">      @review_4 = @meg.reviews.create!(title: &#39;It was only bad&#39;, review: &#39;3asdfasdfadsfadsfadfasdfa&#39;, rating: 3, book_id: @hp_prisoner.id)</code>
+        </li>
+      
+        <li class="covered" data-hits="10" data-linenumber="25">
+          <span class="hits">10</span>
+          
+          <code class="ruby">      @review_5 = @peter.reviews.create!(title: &#39;It was only OK&#39;, review: &#39;1asdfasdfadsfadsfadfasdfa&#39;, rating: 3, book_id: @hp_sorcerer.id)</code>
+        </li>
+      
+        <li class="covered" data-hits="10" data-linenumber="26">
+          <span class="hits">10</span>
+          
+          <code class="ruby">      @review_6 = @peter.reviews.create!(title: &#39;It was only sucked&#39;, review: &#39;2asdfasdfadsfadsfadfasdfa&#39;, rating: 1, book_id: @hp_sorcerer.id)     </code>
+        </li>
+      
+        <li class="covered" data-hits="10" data-linenumber="27">
+          <span class="hits">10</span>
+          
+          <code class="ruby">      @review_7 = @peter.reviews.create!(title: &#39;It was only sucked&#39;, review: &#39;2asdfasdfadsfadsfadfasdfa&#39;, rating: 3, book_id: @hp_half.id)</code>
+        </li>
+      
+        <li class="covered" data-hits="10" data-linenumber="28">
+          <span class="hits">10</span>
+          
+          <code class="ruby">      @review_8 = @joe.reviews.create!(title: &#39;It was only sucked&#39;, review: &#39;2asdfasdfadsfadsfadfasdfa&#39;, rating: 1, book_id: @hp_order.id)</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="29">
+          
+          
+          <code class="ruby">    end</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="30">
+          
+          
+          <code class="ruby"></code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="31">
+          <span class="hits">1</span>
+          
+          <code class="ruby">    it &#39;.average_book_rating&#39; do</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="32">
+          <span class="hits">1</span>
+          
+          <code class="ruby">      expect(@hp_prisoner.average_book_rating.round).to eq(3)</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="33">
+          
+          
+          <code class="ruby">    end</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="34">
+          
+          
+          <code class="ruby"></code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="35">
+          <span class="hits">1</span>
+          
+          <code class="ruby">    it &#39;.count_book_reviews&#39; do</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="36">
+          <span class="hits">1</span>
+          
+          <code class="ruby">      expect(@hp_prisoner.count_book_reviews).to eq(4)</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="37">
+          
+          
+          <code class="ruby">    end</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="38">
+          
+          
+          <code class="ruby"></code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="39">
+          <span class="hits">1</span>
+          
+          <code class="ruby">    it &#39;.top_three_reviews&#39; do</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="40">
+          <span class="hits">1</span>
+          
+          <code class="ruby">      expect(@hp_prisoner.top_three_reviews).to eq([@review_1, @review_2, @review_4])</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="41">
+          
+          
+          <code class="ruby">    end</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="42">
+          
+          
+          <code class="ruby"></code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="43">
+          <span class="hits">1</span>
+          
+          <code class="ruby">    it &#39;bottom_three_reviews&#39; do</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="44">
+          <span class="hits">1</span>
+          
+          <code class="ruby">      expect(@hp_prisoner.bottom_three_reviews).to eq([@review_3, @review_4, @review_1])</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="45">
+          
+          
+          <code class="ruby">    end</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="46">
+          
+          
+          <code class="ruby">    # - the bottom three reviews for this book  (title, rating and user only)</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="47">
+          
+          
+          <code class="ruby">    # - the overall average rating of all reviews for this book</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="48">
+          <span class="hits">1</span>
+          
+          <code class="ruby">    it &#39;.sort_average_rating&#39; do</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="49">
+          <span class="hits">1</span>
+          
+          <code class="ruby">      expect(Book.sort_average_rating(&#39;ASC&#39;).to_a).to eq([@hp_chamber, @hp_order, @hp_sorcerer, @hp_half, @hp_prisoner]) </code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="50">
+          <span class="hits">1</span>
+          
+          <code class="ruby">      expect(Book.sort_average_rating(&#39;DESC&#39;).to_a).to eq([@hp_half, @hp_prisoner, @hp_sorcerer, @hp_order, @hp_chamber]) </code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="51">
+          
+          
+          <code class="ruby">    end</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="52">
+          
+          
+          <code class="ruby"></code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="53">
+          <span class="hits">1</span>
+          
+          <code class="ruby">    it &#39;.sort_number_of_pages&#39; do</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="54">
+          <span class="hits">1</span>
+          
+          <code class="ruby">      expect(Book.sort_number_pages(&#39;ASC&#39;)).to eq([@hp_chamber, @hp_half, @hp_order, @hp_sorcerer, @hp_prisoner])</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="55">
+          <span class="hits">1</span>
+          
+          <code class="ruby">      expect(Book.sort_number_pages(&#39;DESC&#39;)).to eq([@hp_prisoner, @hp_sorcerer, @hp_order, @hp_half, @hp_chamber])</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="56">
+          
+          
+          <code class="ruby">    end</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="57">
+          
+          
+          <code class="ruby"></code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="58">
+          <span class="hits">1</span>
+          
+          <code class="ruby">    it &#39;.sort_number_of_reviews&#39; do</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="59">
+          <span class="hits">1</span>
+          
+          <code class="ruby">      expect(Book.sort_number_reviews(&#39;ASC&#39;).to_a).to eq([@hp_chamber, @hp_half, @hp_order, @hp_sorcerer, @hp_prisoner])</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="60">
+          <span class="hits">1</span>
+          
+          <code class="ruby">      expect(Book.sort_number_reviews(&#39;DESC&#39;).to_a).to eq([@hp_prisoner, @hp_sorcerer, @hp_half, @hp_order, @hp_chamber])</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="61">
+          
+          
+          <code class="ruby">    end</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="62">
+          
+          
+          <code class="ruby"></code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="63">
+          <span class="hits">1</span>
+          
+          <code class="ruby">    it &#39;.stat_three_best_rated&#39; do</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="64">
+          <span class="hits">1</span>
+          
+          <code class="ruby">      expect(Book.stat_three_best_rated()).to eq([@hp_half, @hp_prisoner, @hp_sorcerer])</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="65">
+          
+          
+          <code class="ruby">    end</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="66">
+          
+          
+          <code class="ruby"></code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="67">
+          <span class="hits">1</span>
+          
+          <code class="ruby">    it &#39;.stat_three_worst_rated&#39; do</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="68">
+          <span class="hits">1</span>
+          
+          <code class="ruby">      expect(Book.stat_three_worst_rated()).to eq([@hp_chamber, @hp_order, @hp_sorcerer])</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="69">
+          
+          
+          <code class="ruby">    end</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="70">
+          
+          
+          <code class="ruby"></code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="71">
+          <span class="hits">1</span>
+          
+          <code class="ruby">    it &#39;.stat_three_users_most_reviews&#39; do</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="72">
+          <span class="hits">1</span>
+          
+          <code class="ruby">      expect(Book.stat_three_users_most_reviews().to_a).to eq([@meg, @peter, @joe])</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="73">
+          
+          
+          <code class="ruby">    end</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="74">
+          
+          
+          <code class="ruby">  end</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="75">
+          
+          
+          <code class="ruby">end</code>
+        </li>
+      
+    </ol>
+  </pre>
+</div>
+
+      
+        <div class="source_table" id="3798c3f7b94afa580a052531b176596bace2bc9e">
+  <div class="header">
+    <h3>spec/models/review_spec.rb</h3>
+    <h4><span class="green">100.0 %</span> covered</h4>
+    <div>
+      <b>5</b> relevant lines. 
+      <span class="green"><b>5</b> lines covered</span> and
+      <span class="red"><b>0</b> lines missed.</span>
+    </div>
+  </div>
+  
+  <pre>
+    <ol>
+      
+        <li class="covered" data-hits="1" data-linenumber="1">
+          <span class="hits">1</span>
+          
+          <code class="ruby">require &#39;rails_helper&#39;</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="2">
+          
+          
+          <code class="ruby"></code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="3">
+          <span class="hits">1</span>
+          
+          <code class="ruby">RSpec.describe Review, type: :model do</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="4">
+          <span class="hits">1</span>
+          
+          <code class="ruby">  describe &#39;relationship&#39; do</code>
+        </li>
+      
+        <li class="covered" data-hits="2" data-linenumber="5">
+          <span class="hits">2</span>
+          
+          <code class="ruby">    it {should belong_to :user}</code>
+        </li>
+      
+        <li class="covered" data-hits="2" data-linenumber="6">
+          <span class="hits">2</span>
+          
+          <code class="ruby">    it {should belong_to :book}</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="7">
+          
+          
+          <code class="ruby">  end</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="8">
+          
+          
+          <code class="ruby">end</code>
+        </li>
+      
+    </ol>
+  </pre>
+</div>
+
+      
+        <div class="source_table" id="72ba4c40d250a18294a38ae59834890eef9d24bc">
+  <div class="header">
+    <h3>spec/models/user_spec.rb</h3>
+    <h4><span class="green">100.0 %</span> covered</h4>
+    <div>
+      <b>4</b> relevant lines. 
+      <span class="green"><b>4</b> lines covered</span> and
+      <span class="red"><b>0</b> lines missed.</span>
+    </div>
+  </div>
+  
+  <pre>
+    <ol>
+      
+        <li class="covered" data-hits="1" data-linenumber="1">
+          <span class="hits">1</span>
+          
+          <code class="ruby">require &#39;rails_helper&#39;</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="2">
+          
+          
+          <code class="ruby"></code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="3">
+          <span class="hits">1</span>
+          
+          <code class="ruby">RSpec.describe User, type: :model do</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="4">
+          <span class="hits">1</span>
+          
+          <code class="ruby">  describe &#39;relationship&#39; do</code>
+        </li>
+      
+        <li class="covered" data-hits="2" data-linenumber="5">
+          <span class="hits">2</span>
+          
+          <code class="ruby">    it {should have_many :reviews}</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="6">
+          
+          
+          <code class="ruby">  end</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="7">
           
           
           <code class="ruby">end</code>
