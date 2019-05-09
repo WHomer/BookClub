@@ -49,9 +49,11 @@ RSpec.describe Book, type: :model do
     it '.stat_three_best_rated' do
       expect(Book.stat_three_best_rated()).to eq([@hp_half, @hp_prisoner, @hp_sorcerer])
     end
+
+    it '.stat_three_worst_rated' do
+      expect(Book.stat_three_worst_rated()).to eq([@hp_chamber, @hp_order, @hp_sorcerer])
+    end
   end
 end
 
-
-# - thre three worst-rated books (book title and average rating)
 # - three users who have written the most reviews (user name and review count)

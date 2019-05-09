@@ -36,4 +36,8 @@ class Book < ApplicationRecord
   def self.stat_three_best_rated
     select('books.*, COALESCE(avg(reviews.rating), 0) as average_rating').left_joins(:reviews).group('books.id').order('average_rating DESC, books.title ASC').limit(3)
   end
+
+  def self.stat_three_worst_rated
+    select('books.*, COALESCE(avg(reviews.rating), 0) as average_rating').left_joins(:reviews).group('books.id').order('average_rating ASC, books.title ASC').limit(3)
+  end
 end
