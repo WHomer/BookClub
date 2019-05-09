@@ -1,3 +1,3 @@
 Rails.application.routes.draw do
-  get '/', to: "bookclub#index"
+  get '/', to: "books#index"
 end

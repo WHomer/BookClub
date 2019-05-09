@@ -1,3 +1,5 @@
-class BookController < ApplicationController
-
+class BooksController < ApplicationController
+  def index
+    #@left = 
+  end
 end
