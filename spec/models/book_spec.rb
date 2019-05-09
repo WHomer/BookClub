@@ -40,11 +40,14 @@ RSpec.describe Book, type: :model do
       expect(@hp_prisoner.top_three_reviews).to eq([@review_1, @review_2, @review_4])
     end
 
-    it 'bottom_three_reviews' do
+    it '.bottom_three_reviews' do
       expect(@hp_prisoner.bottom_three_reviews).to eq([@review_3, @review_4, @review_1])
     end
-    # - the bottom three reviews for this book  (title, rating and user only)
-    # - the overall average rating of all reviews for this book
+
+    it '.average_rating' do
+      expect(@hp_prisoner.average_rating).to eq(0.3e1)
+    end
+   
     it '.sort_average_rating' do
       expect(Book.sort_average_rating('ASC').to_a).to eq([@hp_chamber, @hp_order, @hp_sorcerer, @hp_half, @hp_prisoner]) 
       expect(Book.sort_average_rating('DESC').to_a).to eq([@hp_half, @hp_prisoner, @hp_sorcerer, @hp_order, @hp_chamber]) 

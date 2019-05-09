@@ -17,6 +17,10 @@ class Book < ApplicationRecord
     reviews.order('rating ASC, id ASC').limit(3)
   end
 
+  def average_rating
+    reviews.average('rating')
+  end
+
   def self.sort_average_rating(order)
     if order.upcase == 'ASC' || order.upcase == 'ASCENDING'
       select('books.*, COALESCE(AVG(reviews.rating), 0) as average_rating').left_joins(:reviews).group('books.id').order('average_rating ASC, books.title ASC')
