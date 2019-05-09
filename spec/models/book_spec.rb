@@ -7,7 +7,10 @@ RSpec.describe Book, type: :model do
 
   describe 'instance variables' do
     before :each do
+      @peter = User.create!(username: 'Peter Griffen')
+      @brian = User.create!(username: 'Brian Griffen')
       @meg  = User.create!(username: 'Meg Griffen')
+      @joe = User.create!(username: 'Joe Swanson')
       @hp_prisoner = Book.create!(title: "Harry Potter and the Prisoner of Azkaban", page_count: 1234 , year_published: "2010-01-01" , image_url: "https://pics.cdn.librarything.com/picsizes/dd/b9/ddb96bc09edd9c6593241315251434f414f4141.jpg" )
       @hp_sorcerer = Book.create!(title: "Harry Potter and the Sorcerer's Stone", page_count: 903 , year_published: "2019-05-08" , image_url: "https://pics.cdn.librarything.com/picsizes/bd/73/bd73e9ebf18b34a593551665267434f414f4141.jpg" )
       @hp_chamber = Book.create!(title: "Harry Potter and the Chamber of Secrets", page_count: 234 , year_published: "2009-01-01" , image_url: "https://pics.cdn.librarything.com/picsizes/d9/d1/d9d13615817b9be593272635351434f414f4141.jpg" )
@@ -18,9 +21,9 @@ RSpec.describe Book, type: :model do
       @meg.reviews.create!(title: 'It was only bad', review: '3asdfasdfadsfadsfadfasdfa', rating: 3, book_id: @hp_prisoner.id)
       @meg.reviews.create!(title: 'It was only OK', review: '1asdfasdfadsfadsfadfasdfa', rating: 3, book_id: @hp_sorcerer.id)
       @meg.reviews.create!(title: 'It was only sucked', review: '2asdfasdfadsfadsfadfasdfa', rating: 1, book_id: @hp_sorcerer.id)      
-      @meg.reviews.create!(title: 'It was only sucked', review: '2asdfasdfadsfadsfadfasdfa', rating: 3, book_id: @hp_half.id)
-      @meg.reviews.create!(title: 'It was only sucked', review: '2asdfasdfadsfadsfadfasdfa', rating: 1, book_id: @hp_order.id)
-      @meg.reviews.create!(title: 'It was only sucked', review: '2asdfasdfadsfadsfadfasdfa', rating: 1, book_id: @hp_order.id)
+      @peter.reviews.create!(title: 'It was only sucked', review: '2asdfasdfadsfadsfadfasdfa', rating: 3, book_id: @hp_half.id)
+      @peter.reviews.create!(title: 'It was only sucked', review: '2asdfasdfadsfadsfadfasdfa', rating: 1, book_id: @hp_order.id)
+      @joe.reviews.create!(title: 'It was only sucked', review: '2asdfasdfadsfadsfadfasdfa', rating: 1, book_id: @hp_order.id)
     end
 
     it '.average_book_rating' do
@@ -53,7 +56,9 @@ RSpec.describe Book, type: :model do
     it '.stat_three_worst_rated' do
       expect(Book.stat_three_worst_rated()).to eq([@hp_chamber, @hp_order, @hp_sorcerer])
     end
+
+    it '.stat_three_users_most_reviews' do
+      expect(Book.stat_three_users_most_reviews()).to eq([@meg, @peter, @joe])
+    end
   end
 end
-
-# - three users who have written the most reviews (user name and review count)
