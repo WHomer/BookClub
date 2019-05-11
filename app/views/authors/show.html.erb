@@ -1,0 +1,23 @@
+<div class="author-block">
+  <h1><%= @author.name %></h1>
+  <% @author.books.each do |book| %>
+    <div id="book-<%= book.id %>">
+      <img src="<%= book.image_url %>">
+      <ul>
+        <li>Book Title: <%= book.title %></li>
+        <li>Page Count: <%= number_with_delimiter(book.page_count) %></li>
+        <li>Year Published: <%= book.year_published.year %></li>
+      </ul>
+      <div id="books-coauthor-<%= book.id %>">
+        <p>Co-Authors</p>
+        <ul>
+          <% book.authors.each do |coauthor| %>
+            <% if coauthor.id != @author.id %>
+              <li><a href="/authors/<%= coauthor.id %>"><%= coauthor.name %></a></li>
+            <% end %>
+          <% end %>
+        </ul>
+      </div>
+    </div>
+  <% end %>
+</div>
