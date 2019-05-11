@@ -13,6 +13,7 @@ class BooksController < ApplicationController
       end
       i += 1; i = 0 if i > 2
     end
-    @backgrounds = ['#c00', '#c60', '#c90', '#3c0', '#39f', '#969', '#606']
+    # @backgrounds = ['#c00', '#c60', '#c90', '#3c0', '#39f', '#969', '#606']
+    @backgrounds = ['red', 'orange darken-2', 'yellow darken-3', 'green', 'blue darken-2', 'purple']
   end
 end
