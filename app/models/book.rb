@@ -1,5 +1,7 @@
 class Book < ApplicationRecord
   has_many :reviews
+  has_many :author_books
+  has_many :authors, through: :author_books
 
   def average_book_rating
     avg = reviews.average(:rating)
@@ -9,6 +11,18 @@ class Book < ApplicationRecord
 
   def count_book_reviews
     reviews.count
+  end
+
+  def top_three_reviews
+    reviews.order('rating DESC, id ASC').limit(3)
+  end
+
+  def bottom_three_reviews
+    reviews.order('rating ASC, id ASC').limit(3)
+  end
+
+  def average_rating
+    reviews.average('rating')
   end
 
   def self.sort_average_rating(order)
@@ -44,7 +58,7 @@ class Book < ApplicationRecord
   end
 
   def self.stat_three_users_most_reviews
-    User.select('users.*, count(reviews.id) as review_count').left_joins(:reviews).group('users.id').order('users.id ASC').limit(3)
+    User.select('users.*, count(reviews.id) as review_count').left_joins(:reviews).group('users.id').order('review_count DESC, users.id ASC').limit(3)
   end
 
 end

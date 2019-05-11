@@ -1,16 +1,15 @@
 require 'rails_helper'
 
-RSpec.describe Book, type: :model do
-  describe 'relationships' do
-    it {should have_many :reviews}
-  end
-
-  describe 'instance variables' do
+RSpec.describe "As a visitor" do
+  describe "When i visit an author's show page" do
     before :each do
       @peter = User.create!(username: 'Peter Griffen')
       @brian = User.create!(username: 'Brian Griffen')
       @meg  = User.create!(username: 'Meg Griffen')
       @joe = User.create!(username: 'Joe Swanson')
+
+      @jk_rowling = Author.create!(name: 'J. K. Rowling', image_url: 'https://pics.librarything.com/picsizes/3e/9b/3e9bc00722b81c46367767669774330414f6744.jpg')
+      @dumbledore = Author.create!(name: 'Albus Dumbledore', image_url: 'https://pics.librarything.com/picsizes/29/8a/298a29de773bddc6368334f6e514330414f6744.jpg')
       
       @hp_prisoner = Book.create!(title: "Harry Potter and the Prisoner of Azkaban", page_count: 1234 , year_published: "2010-01-01" , image_url: "https://pics.cdn.librarything.com/picsizes/dd/b9/ddb96bc09edd9c6593241315251434f414f4141.jpg" )
       @hp_sorcerer = Book.create!(title: "Harry Potter and the Sorcerer's Stone", page_count: 903 , year_published: "2019-05-08" , image_url: "https://pics.cdn.librarything.com/picsizes/bd/73/bd73e9ebf18b34a593551665267434f414f4141.jpg" )
@@ -18,6 +17,9 @@ RSpec.describe Book, type: :model do
       @hp_half = Book.create!(title: "Harry Potter and the Half-Blood Prince", page_count: 432 , year_published: "2011-01-01" , image_url: "https://pics.cdn.librarything.com/picsizes/c3/7f/c37f9cd35eeb1065930546a5251434f414f4141.jpg" )
       @hp_order = Book.create!(title: "Harry Potter and the Order of the Phoenix", page_count: 543 , year_published: "2012-01-01" , image_url: "https://pics.cdn.librarything.com/picsizes/ef/59/ef59930168456ea593072765351434f414f4141.jpg" )
       
+      @jk_rowling.books << [@hp_prisoner, @hp_sorcerer, @hp_chamber, @hp_half]
+      @dumbledore.books << [@hp_prisoner, @hp_sorcerer, @hp_order]
+
       @review_1 = @meg.reviews.create!(title: 'It was only OK', review: '1asdfasdfadsfadsfadfasdfa', rating: 4, book_id: @hp_prisoner.id)
       @review_2 = @meg.reviews.create!(title: 'It was only OK', review: '1asdfasdfadsfadsfadfasdfa', rating: 4, book_id: @hp_prisoner.id)
       @review_3 = @meg.reviews.create!(title: 'It was only sucked', review: '2asdfasdfadsfadsfadfasdfa', rating: 1, book_id: @hp_prisoner.id)
@@ -28,51 +30,22 @@ RSpec.describe Book, type: :model do
       @review_8 = @joe.reviews.create!(title: 'It was only sucked', review: '2asdfasdfadsfadsfadfasdfa', rating: 1, book_id: @hp_order.id)
     end
 
-    it '.average_book_rating' do
-      expect(@hp_prisoner.average_book_rating.round).to eq(3)
-    end
+    it "I can see all books by that author" do
 
-    it '.count_book_reviews' do
-      expect(@hp_prisoner.count_book_reviews).to eq(4)
-    end
+      visit "/authors/#{@jk_rowling.id}"
 
-    it '.top_three_reviews' do
-      expect(@hp_prisoner.top_three_reviews).to eq([@review_1, @review_2, @review_4])
-    end
+      within("#book-#{@hp_prisoner.id}") do 
+        formated_page_count = @hp_prisoner.page_count.to_s.chars.to_a.reverse.each_slice(3).map(&:join).join(",").reverse
+        expect(page).to have_content(@hp_prisoner.title)
+        expect(page).to have_content(formated_page_count)
+        expect(page).to have_content(@hp_prisoner.year_published.year)
+        expect(page).to have_css("img[src*='#{@hp_prisoner.image_url}']")
 
-    it '.bottom_three_reviews' do
-      expect(@hp_prisoner.bottom_three_reviews).to eq([@review_3, @review_4, @review_1])
-    end
-
-    it '.average_rating' do
-      expect(@hp_prisoner.average_rating).to eq(0.3e1)
-    end
-   
-    it '.sort_average_rating' do
-      expect(Book.sort_average_rating('ASC').to_a).to eq([@hp_chamber, @hp_order, @hp_sorcerer, @hp_half, @hp_prisoner]) 
-      expect(Book.sort_average_rating('DESC').to_a).to eq([@hp_half, @hp_prisoner, @hp_sorcerer, @hp_order, @hp_chamber]) 
-    end
-
-    it '.sort_number_of_pages' do
-      expect(Book.sort_number_pages('ASC')).to eq([@hp_chamber, @hp_half, @hp_order, @hp_sorcerer, @hp_prisoner])
-      expect(Book.sort_number_pages('DESC')).to eq([@hp_prisoner, @hp_sorcerer, @hp_order, @hp_half, @hp_chamber])
-    end
-
-    it '.sort_number_of_reviews' do
-      expect(Book.sort_number_reviews('ASC').to_a).to eq([@hp_chamber, @hp_half, @hp_order, @hp_sorcerer, @hp_prisoner])
-      expect(Book.sort_number_reviews('DESC').to_a).to eq([@hp_prisoner, @hp_sorcerer, @hp_half, @hp_order, @hp_chamber])
-    end
-
-    it '.stat_three_best_rated' do
-      expect(Book.stat_three_best_rated()).to eq([@hp_half, @hp_prisoner, @hp_sorcerer])
-    end
-
-    it '.stat_three_worst_rated' do
-      expect(Book.stat_three_worst_rated()).to eq([@hp_chamber, @hp_order, @hp_sorcerer])
-    end
-
-    it '.stat_three_users_most_reviews' do
-      expect(Book.stat_three_users_most_reviews().to_a).to eq([@meg, @peter, @joe])
+        within("#books-coauthor-#{@hp_prisoner.id}") do
+          expect(page).to have_content(@dumbledore.name)
+          expect(page).to have_css("a[href*='/authors/#{@dumbledore.id}']")
+        end
+      end
     end
   end
 end
