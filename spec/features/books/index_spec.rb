@@ -33,13 +33,30 @@ RSpec.describe "As a visitor," do
     it "sees an author and page count" do
       visit "/"
 
-      within("#book-content#{@book1.id}") do
-        
+      within("#book-content-#{@book1.id}") do
+        expect(page).to have_content(@book1.authors)
+        expect(page).to have_content(@book1.page_count)
+      end
+      within("#book-content-#{@book2.id}") do
+        expect(page).to have_content(@book2.authors)
+        expect(page).to have_content(@book2.page_count)
+      end
+      within("#book-content-#{@book3.id}") do
+        expect(page).to have_content(@book3.authors)
+        expect(page).to have_content(@book3.page_count)
+      end
+      within("#book-content-#{@book4.id}") do
+        expect(page).to have_content(@book4.authors)
+        expect(page).to have_content(@book4.page_count)
+      end
+      within("#book-content-#{@book5.id}") do
+        expect(page).to have_content(@book5.authors)
+        expect(page).to have_content(@book5.page_count)
       end
     end
 
     it "sees average reviews and review count" do
-
+      
     end
   end
 end
