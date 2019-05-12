@@ -83,11 +83,17 @@ RSpec.describe 'as a visitor' do
       expect(page.all(".reviews")[2]).to have_content(@review_2.title)
       expect(page.all(".reviews")[3]).to have_content(@review_1.title)
     end
+
+    it "shows a link to delete a review" do
+      visit "/users/#{@meg.id}"
+
+      within("#review-#{@review_1.id}") do
+        expect(page).to have_css("a[href*='/reviews/#{@review_1.id}']")
+
+        click_link("Delete")
+
+        expect(page).to have_current_path("/users/#{@meg.id}")
+      end
+    end
   end
 end
-
-# As a Visitor,
-# When I visit a user's show page
-# I should also see links to sort reviews in the following ways:
-# - sort reviews newest first (descending chronological order)
-# - sort reviews oldest first (ascending chronological order)

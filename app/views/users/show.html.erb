@@ -11,6 +11,10 @@
       <p><%= review.book.title %></p>
       <img src="<%= review.book.image_url%>">
       <p>Date Reviewed: <%= review.created_at.strftime("%D") %> </p>
+      <%= link_to 'Delete', 
+             review_path(review), 
+                         method: :delete, 
+                         data: { confirm: 'Are you sure?' } %> 
     </div>
   <% end %>
 </div>
