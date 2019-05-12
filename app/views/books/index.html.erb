@@ -11,17 +11,22 @@
         HEWOO
       </nav>
     </div> -->
+
+
+
+
+
     <div class="container">
       <div class="row">
         <div class="col s12 m6 l4">
         <% bg = 0 %>
         <% @left.each do |book| %>
-          <div class="card z-depth-2 <%=@backgrounds[bg]%> white-text">
+          <div id="book-<%=book.id%>" class="card z-depth-2 <%=@backgrounds[bg]%> white-text">
             <div class="card-image">
-              <a class="modal-trigger" href="#modal1">
+              <a class="modal-trigger" href="#show-modal-<%=book.id%>">
                 <img src="<%=book.image_url%>">
               </a>
-              <span class="card-title white-text">
+              <span id="book-title-<%=book.id%>" class="card-title white-text">
                 <span class="z-depth-2 book-title flow-text">
                   <!-- <svg viewBox="0 100 100" xmlns"http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
                     <foreignObject width=auto height=auto>
@@ -32,9 +37,9 @@
                 </span>
               </span>
             </div>
-            <div class="card-content flow-text">
+            <div id="book-content-<%=book.id%>" class="card-content flow-text">
               <div class="clearfix valign-wrapper book-row-padding" style="padding-bottom: 25px">
-                <h4 class="left book-author">By: heck</h4>
+                <h4 class="left book-author">By:<%=book.authors.first.name%></h4>
                 <div class="left book-page-count-display">
                   <h5 class="book-page-count"><%=book.page_count%><br>pages</h5>
                 </div>
@@ -51,17 +56,48 @@
             </div>
           </div>
         <% bg += 1; bg = 0 if bg > 6 %>
+
+        <div id="show-modal-<%=book.id%>" class="modal right-sheet grey darken-2 white-text">
+          <div class="modal-content" style="padding: 50px">
+            <div class="row">
+              <div class="col s8">
+                <div class="row">
+                  <h4><%=book.title%></h4>
+                </div>
+                <div class="row">
+                  <div class="col s6">
+                    <h4><%=book.authors.first.name%></h4>
+                  </div>
+                  <div class="col s6">
+                    <div class="right"><h4><%=book.page_count%><br>pages</h4></div>
+                  </div>
+                </div>
+              </div>
+              <div class="col s4">
+                <img src="<%=book.image_url%>">
+              </div>
+            </div>
+            <div class="row">
+              <h4>Reviews:</h4>
+            </div>
+          </div>
+        </div>
         <% end %>
         </div>
+
+
+
+
+
         <div class="col s12 m6 l4">
         <% bg = 0 %>
         <% @mid.each do |book| %>
-          <div class="card z-depth-2 <%=@backgrounds[bg]%> white-text">
+          <div id="book-<%=book.id%>" class="card z-depth-2 <%=@backgrounds[bg]%> white-text">
             <div class="card-image">
-              <a class="modal-trigger" href="#modal1">
+              <a class="modal-trigger" href="#show-modal-<%=book.id%>">
                 <img src="<%=book.image_url%>">
               </a>
-              <span class="card-title white-text">
+              <span id="book-title-<%=book.id%>" class="card-title white-text">
                 <span class="z-depth-2 book-title flow-text">
                   <!-- <svg viewBox="0 100 100" xmlns"http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
                     <foreignObject width=auto height=auto>
@@ -72,9 +108,9 @@
                 </span>
               </span>
             </div>
-            <div class="card-content flow-text">
+            <div id="book-content-<%=book.id%>" class="card-content flow-text">
               <div class="clearfix valign-wrapper book-row-padding" style="padding-bottom: 25px">
-                <h4 class="left book-author">By: heck</h4>
+                <h4 class="left book-author">By:<%=book.authors.first.name%></h4>
                 <div class="left book-page-count-display">
                   <h5 class="book-page-count"><%=book.page_count%><br>pages</h5>
                 </div>
@@ -93,15 +129,20 @@
         <% bg += 1; bg = 0 if bg > 6 %>
         <% end %>
         </div>
+
+
+
+
+
         <div class="col s12 m6 l4">
         <% bg = 0 %>
         <% @right.each do |book| %>
-          <div class="card z-depth-2 <%=@backgrounds[bg]%> white-text">
+          <div id="book-<%=book.id%>" class="card z-depth-2 <%=@backgrounds[bg]%> white-text">
             <div class="card-image">
-              <a class="modal-trigger" href="#modal1">
+              <a class="modal-trigger" href="#show-modal-<%=book.id%>">
                 <img src="<%=book.image_url%>">
               </a>
-              <span class="card-title white-text">
+              <span id="book-title-<%=book.id%>" class="card-title white-text">
                 <span class="z-depth-2 book-title flow-text">
                   <!-- <svg viewBox="0 100 100" xmlns"http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
                     <foreignObject width=auto height=auto>
@@ -112,9 +153,9 @@
                 </span>
               </span>
             </div>
-            <div class="card-content flow-text">
+            <div id="book-content-<%=book.id%>" class="card-content flow-text">
               <div class="clearfix valign-wrapper book-row-padding" style="padding-bottom: 25px">
-                <h4 class="left book-author">By: heck</h4>
+                <h4 class="left book-author">By: <%=book.authors.first.name%></h4>
                 <div class="left book-page-count-display">
                   <h5 class="book-page-count"><%=book.page_count%><br>pages</h5>
                 </div>
@@ -133,12 +174,6 @@
         <% bg += 1; bg = 0 if bg > 6 %>
         <% end %>
         </div>
-          <div id="modal1" class="modal right-sheet grey darken-2 white-text">
-            <div class="modal-content" style="padding: 50px">
-              Heck
-            </div>
-          </div>
-
       </div>
     </div>
   </body>

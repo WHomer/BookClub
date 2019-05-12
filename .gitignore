@@ -31,3 +31,6 @@
 /config/master.key
 
 /app/assets/.sass-cache
+
+/coverage
+/coverage/*
