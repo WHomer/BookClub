@@ -3,9 +3,10 @@ class BooksController < ApplicationController
     #queryingstuff
     @to_show = params[:id].to_i
     books = Book.all
-    @left = []; @mid = []; @right = []
+    @left = []; @mid = []; @right = []; @reviews = {}
     i = 0
     books.each do |book|
+      @reviews[book.id] = book.reviews
       case i
       when 0; @left << book
       when 1; @mid << book
