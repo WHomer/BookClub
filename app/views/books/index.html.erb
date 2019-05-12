@@ -16,17 +16,17 @@
 
 
 
-    <div class="container">
+    <div class="card-container" style="margin-left: 300px">
       <div class="row">
         <div class="col s12 m6 l4">
         <% bg = 0 %>
         <% @left.each do |book| %>
-          <div id="book-<%=book.id%>" class="card z-depth-2 <%=@backgrounds[bg]%> white-text">
+          <div id="book-<%=book.id%>" class="card z-depth-2 <%=@backgrounds[bg]%>">
             <div class="card-image">
               <a class="modal-trigger" href="#<%=book.id%>">
                 <img src="<%=book.image_url%>">
               </a>
-              <span id="book-title-<%=book.id%>" class="card-title white-text">
+              <span id="book-title-<%=book.id%>" class="card-title">
                 <span class="z-depth-2 book-title flow-text">
                   <!-- <svg viewBox="0 100 100" xmlns"http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
                     <foreignObject width=auto height=auto>
@@ -57,7 +57,7 @@
           </div>
         <% bg += 1; bg = 0 if bg > 6 %>
 
-        <div id="<%=book.id%>" class="modal right-sheet grey darken-2 white-text<%=" to-show" if book.id == @to_show%>">
+        <div id="<%=book.id%>" class="modal right-sheet grey darken-2<%=" to-show" if book.id == @to_show%>">
           <div class="modal-content" style="padding: 50px">
             <div class="row">
               <div class="col s8">
@@ -85,7 +85,7 @@
               <% else %>
               <% rvbg = 0 %>
               <%@reviews[book.id].each do |review|%>
-                <div class="card z-depth-2 <%=@backgrounds[rvbg]%> white-text">
+                <div class="card z-depth-2 <%=@backgrounds[rvbg]%>">
                   <div class="card-content">
                     <div class="row" style="margin-bottom: 7px">
                       <div class="col s10">
@@ -120,12 +120,12 @@
         <div class="col s12 m6 l4">
         <% bg = 0 %>
         <% @mid.each do |book| %>
-          <div id="book-<%=book.id%>" class="card z-depth-2 <%=@backgrounds[bg]%> white-text">
+          <div id="book-<%=book.id%>" class="card z-depth-2 <%=@backgrounds[bg]%>">
             <div class="card-image">
               <a class="modal-trigger" href="#<%=book.id%>">
                 <img src="<%=book.image_url%>">
               </a>
-              <span id="book-title-<%=book.id%>" class="card-title white-text">
+              <span id="book-title-<%=book.id%>" class="card-title">
                 <span class="z-depth-2 book-title flow-text">
                   <!-- <svg viewBox="0 100 100" xmlns"http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
                     <foreignObject width=auto height=auto>
@@ -156,7 +156,7 @@
           </div>
         <% bg += 1; bg = 0 if bg > 6 %>
 
-        <div id="<%=book.id%>" class="modal right-sheet grey darken-2 white-text<%=" to-show" if book.id == @to_show%>">
+        <div id="<%=book.id%>" class="modal right-sheet grey darken-2<%=" to-show" if book.id == @to_show%>">
           <div class="modal-content" style="padding: 50px; overflow: hidden">
             <div class="row">
               <div class="col s8">
@@ -184,7 +184,7 @@
               <% else %>
               <% rvbg = 0 %>
               <%@reviews[book.id].each do |review|%>
-                <div class="card z-depth-2 <%=@backgrounds[rvbg]%> white-text">
+                <div class="card z-depth-2 <%=@backgrounds[rvbg]%>">
                   <div class="card-content">
                     <div class="row" style="margin-bottom: 7px">
                       <div class="col s10">
@@ -219,12 +219,12 @@
         <div class="col s12 m6 l4">
         <% bg = 0 %>
         <% @right.each do |book| %>
-          <div id="book-<%=book.id%>" class="card z-depth-2 <%=@backgrounds[bg]%> white-text">
+          <div id="book-<%=book.id%>" class="card z-depth-2 <%=@backgrounds[bg]%>">
             <div class="card-image">
               <a class="modal-trigger" href="#<%=book.id%>">
                 <img src="<%=book.image_url%>">
               </a>
-              <span id="book-title-<%=book.id%>" class="card-title white-text">
+              <span id="book-title-<%=book.id%>" class="card-title">
                 <span class="z-depth-2 book-title flow-text">
                   <!-- <svg viewBox="0 100 100" xmlns"http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
                     <foreignObject width=auto height=auto>
@@ -255,7 +255,7 @@
           </div>
         <% bg += 1; bg = 0 if bg > 6 %>
 
-        <div id="<%=book.id%>" class="modal right-sheet grey darken-2 white-text<%=" to-show" if book.id == @to_show%>">
+        <div id="<%=book.id%>" class="modal right-sheet grey darken-2<%=" to-show" if book.id == @to_show%>">
           <div class="modal-content" style="padding: 50px; overflow: hidden">
             <div class="row">
               <div class="col s8">
@@ -283,7 +283,7 @@
               <% else %>
               <% rvbg = 0 %>
               <%@reviews[book.id].each do |review|%>
-                <div class="card z-depth-2 <%=@backgrounds[rvbg]%> white-text">
+                <div class="card z-depth-2 <%=@backgrounds[rvbg]%>">
                   <div class="card-content">
                     <div class="row" style="margin-bottom: 7px">
                       <div class="col s10">
