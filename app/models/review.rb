@@ -1,6 +1,7 @@
 class Review < ApplicationRecord
-  belongs_to :user
+  
   belongs_to :book
+  belongs_to :user
 
   def pretty_date(source = :created)
     if source == :updated; raw = self.updated_at.to_s

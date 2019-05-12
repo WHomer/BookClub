@@ -58,5 +58,21 @@ RSpec.describe 'as a visitor' do
         expect(page).to have_css("img[src*='#{@review_2.book.image_url}']")
       end
     end
+
+    it "shows reviews in order by created date" do
+      visit "/users/#{@meg.id}?order_date=ASC"
+
+      expect(page.all(".reviews")[0]).to have_content(@review_1.title)
+      expect(page.all(".reviews")[1]).to have_content(@review_2.title)
+      expect(page.all(".reviews")[2]).to have_content(@review_3.title)
+      expect(page.all(".reviews")[3]).to have_content(@review_4.title)
+
+    end
   end
 end
+
+# As a Visitor,
+# When I visit a user's show page
+# I should also see links to sort reviews in the following ways:
+# - sort reviews newest first (descending chronological order)
+# - sort reviews oldest first (ascending chronological order)
