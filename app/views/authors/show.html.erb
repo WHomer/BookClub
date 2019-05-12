@@ -8,6 +8,14 @@
         <li>Page Count: <%= number_with_delimiter(book.page_count) %></li>
         <li>Year Published: <%= book.year_published.year %></li>
       </ul>
+      <div id="top-review-book-<%= book.id %>">
+        <p>
+          <% if book.top_three_reviews.first %>
+            <strong><%= book.top_three_reviews.first.user.username %></strong><br>
+            <strong><%= book.top_three_reviews.first.title %> - <%= book.top_three_reviews.first.rating %> / 5</strong>
+          <% end%>
+        </p>
+      </div>
       <div id="books-coauthor-<%= book.id %>">
         <p>Co-Authors</p>
         <ul>
