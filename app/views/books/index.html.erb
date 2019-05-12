@@ -5,14 +5,35 @@
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet"/>
     <!-- <link type="text/css" rel="stylesheet" href="materialize.min.css" media="screen,projection"/> -->
   </head>
-  <body class="grey darken-2">
-    <!-- <div class="navbar-fixed">
-      <nav class="grey darken-1 z-depth-3" role="navigation">
-        <%=@to_show%> <%=@left.first.id%> <%=@to_show.to_i == @left.first.id%>
-      </nav>
-    </div> -->
+  <body class="grey darken-2 white-text">
+    <div class="sidenav sidenav-fixed grey z-depth-4">
+      <div class="sidenav-content">
+        <h2 class="sidenav-title">BookClub</h2>
+        <ul>
+          <li class="sidenav-link">
+            <a class="white-text" style="position: relative; padding: 0" href="books">
+              <div class="left-block"></div>
+              <h4 class="sidenav-text">Books</h4>
+            </a>
+          </li>
+          <li class="spacer-cause-css-sucks"></li>
+          <li class="sidenav-link">
+            <a class="white-text" style="position: relative; padding: 0" href="authors">
+              <div class="left-block"></div>
+              <h4 class="sidenav-text">Authors</h4>
+            </a>
+          </li>
+          <li class="spacer-cause-css-sucks"></li>
+          <li class="sidenav-link">
+            <a class="white-text" style="position: relative; padding: 0" href="users">
+              <div class="left-block"></div>
+              <h4 class="sidenav-text">Users</h4>
+            </a>
+          </li>
+        </ul>
 
-
+      </div>
+    </div>
 
 
 
