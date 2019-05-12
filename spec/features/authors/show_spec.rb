@@ -47,5 +47,15 @@ RSpec.describe "As a visitor" do
         end
       end
     end
+
+    it "I should see one of the highest rated reviews" do 
+      visit "/authors/#{@jk_rowling.id}"
+
+      within("#top-review-book-#{@hp_prisoner.id}") do
+        expect(page).to have_content(@review_1.title)
+        expect(page).to have_content(@review_1.rating)
+        expect(page).to have_content(@meg.username)
+      end
+    end
   end
 end
