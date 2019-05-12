@@ -39,7 +39,7 @@
             </div>
             <div id="book-content-<%=book.id%>" class="card-content flow-text">
               <div class="clearfix valign-wrapper book-row-padding" style="padding-bottom: 25px">
-                <h4 class="left book-author">By: <%=book.authors%></h4>
+                <h4 class="left book-author">By: heck</h4>
                 <div class="left book-page-count-display">
                   <h5 class="book-page-count"><%=book.page_count%><br>pages</h5>
                 </div>
@@ -56,6 +56,32 @@
             </div>
           </div>
         <% bg += 1; bg = 0 if bg > 6 %>
+
+        <div id="show-modal-<%=book.id%>" class="modal right-sheet grey darken-2 white-text">
+          <div class="modal-content" style="padding: 50px">
+            <div class="row">
+              <div class="col s8">
+                <div class="row">
+                  <h4><%=book.title%></h4>
+                </div>
+                <div class="row">
+                  <div class="col s6">
+                    <h4><%=book.authors.first.name%></h4>
+                  </div>
+                  <div class="col s6">
+                    <div class="right"><h4><%=book.page_count%><br>pages</h4></div>
+                  </div>
+                </div>
+              </div>
+              <div class="col s4">
+                <img src="<%=book.image_url%>">
+              </div>
+            </div>
+            <div class="row">
+              <h4>Reviews:</h4>
+            </div>
+          </div>
+        </div>
         <% end %>
         </div>
 
@@ -84,7 +110,7 @@
             </div>
             <div id="book-content-<%=book.id%>" class="card-content flow-text">
               <div class="clearfix valign-wrapper book-row-padding" style="padding-bottom: 25px">
-                <h4 class="left book-author">By: <%=book.authors%></h4>
+                <h4 class="left book-author">By: heck</h4>
                 <div class="left book-page-count-display">
                   <h5 class="book-page-count"><%=book.page_count%><br>pages</h5>
                 </div>
@@ -129,7 +155,7 @@
             </div>
             <div id="book-content-<%=book.id%>" class="card-content flow-text">
               <div class="clearfix valign-wrapper book-row-padding" style="padding-bottom: 25px">
-                <h4 class="left book-author">By: <%=book.authors%></h4>
+                <h4 class="left book-author">By: heck</h4>
                 <div class="left book-page-count-display">
                   <h5 class="book-page-count"><%=book.page_count%><br>pages</h5>
                 </div>
@@ -148,18 +174,6 @@
         <% bg += 1; bg = 0 if bg > 6 %>
         <% end %>
         </div>
-
-
-
-
-
-
-          <div id="modal1" class="modal right-sheet grey darken-2 white-text">
-            <div class="modal-content" style="padding: 50px">
-              Heck
-            </div>
-          </div>
-
       </div>
     </div>
   </body>
