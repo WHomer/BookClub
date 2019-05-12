@@ -1,7 +1,7 @@
 require 'rails_helper'
 
 RSpec.describe "As a visitor," do
-  describe "when visiting root," do
+  describe "when visiting books," do
     before :each do
       @book1 = Book.create! title: "Book 1", page_count: "100", year_published: "10", image_url: "http://lorempixel.com/400/600/cats"
       @book2 = Book.create! title: "Book 2", page_count: "110", year_published: "20", image_url: "http://lorempixel.com/400/600/cats"
@@ -11,7 +11,7 @@ RSpec.describe "As a visitor," do
     end
 
     it "sees a title" do
-      visit "/"
+      visit "/books"
 
       within("#book-title-#{@book1.id}") do
         expect(page).to have_content(@book1.title)
@@ -31,7 +31,7 @@ RSpec.describe "As a visitor," do
     end
 
     it "sees an author and page count" do
-      visit "/"
+      visit "/books"
 
       within("#book-content-#{@book1.id}") do
         expect(page).to have_content(@book1.authors)
@@ -56,7 +56,7 @@ RSpec.describe "As a visitor," do
     end
 
     it "sees average reviews and review count" do
-      
+
     end
   end
 end
