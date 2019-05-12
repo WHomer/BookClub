@@ -1,4 +1,7 @@
 <div>
+  <a href="/users/<%= @user.id %>?order_date=ASC">Sort Ascending</a>
+  <a href="/users/<%= @user.id %>?order_date=DESC">Sort Descending</a>
+
   <h1><%= @user.username %> </h1>
   <% @reviews.each do |review| %>
     <div id="review-<%= review.id %>" class="reviews">
