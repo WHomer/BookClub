@@ -1,7 +1,7 @@
 require 'rails_helper'
 
 RSpec.describe "As a visitor," do
-  describe "when visiting root," do
+  describe "when visiting books," do
     before :each do
       Book.destroy_all
       Author.destroy_all
@@ -39,7 +39,7 @@ RSpec.describe "As a visitor," do
     end
 
     it "sees a title" do
-      visit "/"
+      visit "/books"
 
       within("#book-title-#{@book1.id}") do
         expect(page).to have_content(@book1.title)
@@ -59,7 +59,7 @@ RSpec.describe "As a visitor," do
     end
 
     it "sees an author and page count" do
-      visit "/"
+      visit "/books"
 
       within("#book-content-#{@book1.id}") do
         expect(page).to have_content(@book1_author)
@@ -84,8 +84,8 @@ RSpec.describe "As a visitor," do
     end
 
     it "sees average reviews and review count" do
-      visit "/"
-      
+      visit "/books"
+
       within("#book-content-#{@book1.id}") do
         expect(page).to have_content(1)
         expect(page).to have_content(5.0)

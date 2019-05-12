@@ -19,4 +19,10 @@
 document.addEventListener('DOMContentLoaded', function() {
   var elems = document.querySelectorAll('.modal');
   var instances = M.Modal.init(elems);
+
+  var to_show = document.querySelector('.to-show');
+  if (to_show != null) {
+    M.Modal.getInstance(to_show).open();
+  };
+
 });
