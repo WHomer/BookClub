@@ -32,7 +32,7 @@ RSpec.describe User, type: :model do
       expect(@meg.order_reviews_by_date_asc).to eq([@review_1, @review_2, @review_3, @review_4])
     end
 
-    it '.order_date_asc' do
+    it '.order_date_desc' do
       expect(@meg.order_reviews_by_date_desc).to eq([@review_4, @review_3, @review_2, @review_1])
     end
   end

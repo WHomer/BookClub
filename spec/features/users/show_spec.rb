@@ -59,14 +59,22 @@ RSpec.describe 'as a visitor' do
       end
     end
 
-    it "shows reviews in order by created date" do
+    it "shows reviews in order by created date asc" do
       visit "/users/#{@meg.id}?order_date=ASC"
 
       expect(page.all(".reviews")[0]).to have_content(@review_1.title)
       expect(page.all(".reviews")[1]).to have_content(@review_2.title)
       expect(page.all(".reviews")[2]).to have_content(@review_3.title)
       expect(page.all(".reviews")[3]).to have_content(@review_4.title)
+    end
 
+    it "shows reviews in order by created date desc" do
+      visit "/users/#{@meg.id}?order_date=DESC"
+
+      expect(page.all(".reviews")[0]).to have_content(@review_4.title)
+      expect(page.all(".reviews")[1]).to have_content(@review_3.title)
+      expect(page.all(".reviews")[2]).to have_content(@review_2.title)
+      expect(page.all(".reviews")[3]).to have_content(@review_1.title)
     end
   end
 end

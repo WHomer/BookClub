@@ -1,6 +1,6 @@
 <div>
   <h1><%= @user.username %> </h1>
-  <% @user.reviews.each do |review| %>
+  <% @reviews.each do |review| %>
     <div id="review-<%= review.id %>" class="reviews">
       <h3><%= review.title %></h3>
       <p><%= review.review %></p>
