@@ -5,30 +5,28 @@
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet"/>
     <!-- <link type="text/css" rel="stylesheet" href="materialize.min.css" media="screen,projection"/> -->
   </head>
-
   <body class="grey darken-2">
     <!-- <div class="navbar-fixed">
       <nav class="grey darken-1 z-depth-3" role="navigation">
-        <%=@to_show%> <%=@left.first.id%> <%=@to_show.to_i == @left.first.id%>
+        HEWOO
       </nav>
     </div> -->
 
-      </div>
-    </div>
 
 
 
-    <div class="card-container" style="margin-left: 300px">
+
+    <div class="container">
       <div class="row">
         <div class="col s12 m6 l4">
         <% bg = 0 %>
         <% @left.each do |book| %>
-          <div id="book-<%=book.id%>" class="card z-depth-2 <%=@backgrounds[bg]%>">
+          <div id="book-<%=book.id%>" class="card z-depth-2 <%=@backgrounds[bg]%> white-text">
             <div class="card-image">
-              <a class="modal-trigger" href="#<%=book.id%>">
+              <a class="modal-trigger" href="#show-modal-<%=book.id%>">
                 <img src="<%=book.image_url%>">
               </a>
-              <span id="book-title-<%=book.id%>" class="card-title">
+              <span id="book-title-<%=book.id%>" class="card-title white-text">
                 <span class="z-depth-2 book-title flow-text">
                   <!-- <svg viewBox="0 100 100" xmlns"http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
                     <foreignObject width=auto height=auto>
@@ -41,7 +39,7 @@
             </div>
             <div id="book-content-<%=book.id%>" class="card-content flow-text">
               <div class="clearfix valign-wrapper book-row-padding" style="padding-bottom: 25px">
-                <h4 class="left book-author">By:<%=book.authors.first.name%></h4>
+                <h4 class="left book-author">By: <%=book.authors%></h4>
                 <div class="left book-page-count-display">
                   <h5 class="book-page-count"><%=book.page_count%><br>pages</h5>
                 </div>
@@ -58,60 +56,6 @@
             </div>
           </div>
         <% bg += 1; bg = 0 if bg > 6 %>
-
-        <div id="<%=book.id%>" class="modal right-sheet grey darken-2 white-text<%=" to-show" if book.id == @to_show%>">
-          <div class="modal-content" style="padding: 50px">
-            <div class="row">
-              <div class="col s8">
-                <div class="row">
-                  <h4><%=book.title%></h4>
-                </div>
-                <div class="row">
-                  <div class="col s6">
-                    <h4><%=book.authors.first.name%></h4>
-                  </div>
-                  <div class="col s6">
-                    <div class="right"><h4><%=book.page_count%><br>pages</h4></div>
-                  </div>
-                </div>
-              </div>
-              <div class="col s4">
-                <img src="<%=book.image_url%>">
-              </div>
-            </div>
-            <div class="row">
-              <h4>Reviews:</h4>
-              <div class="col s12">
-              <% if @reviews[book.id].empty? then%>
-              <h4>None.</h4>
-              <% else %>
-              <% rvbg = 0 %>
-
-                <div class="card z-depth-2 <%=@backgrounds[rvbg]%> white-text">
-                  <div class="card-content">
-                    <div class="row" style="margin-bottom: 7px">
-                      <div class="col s10">
-                        <h5 style="margin: 0"><%=review.title%></h5>
-                        <p><em>By: <%=review.user.username%>, <%=review.pretty_date(:created)%></em></p>
-                      </div>
-                      <div class="col s2 valign-wrapper">
-                        <h4><%=review.rating%></h4>
-                      </div>
-                    </div>
-                    <div class="row">
-                      <div class="col s12">
-                        <p><%=review.review%></p>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-                <% rvbg += 1; rvbg = 0 if rvbg > 6 %>
-                <% end %>
-              <%end%>
-              </div>
-            </div>
-          </div>
-        </div>
         <% end %>
         </div>
 
@@ -122,12 +66,12 @@
         <div class="col s12 m6 l4">
         <% bg = 0 %>
         <% @mid.each do |book| %>
-          <div id="book-<%=book.id%>" class="card z-depth-2 <%=@backgrounds[bg]%>">
+          <div id="book-<%=book.id%>" class="card z-depth-2 <%=@backgrounds[bg]%> white-text">
             <div class="card-image">
-              <a class="modal-trigger" href="#<%=book.id%>">
+              <a class="modal-trigger" href="#show-modal-<%=book.id%>">
                 <img src="<%=book.image_url%>">
               </a>
-              <span id="book-title-<%=book.id%>" class="card-title">
+              <span id="book-title-<%=book.id%>" class="card-title white-text">
                 <span class="z-depth-2 book-title flow-text">
                   <!-- <svg viewBox="0 100 100" xmlns"http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
                     <foreignObject width=auto height=auto>
@@ -140,7 +84,7 @@
             </div>
             <div id="book-content-<%=book.id%>" class="card-content flow-text">
               <div class="clearfix valign-wrapper book-row-padding" style="padding-bottom: 25px">
-                <h4 class="left book-author">By:<%=book.authors.first.name%></h4>
+                <h4 class="left book-author">By: <%=book.authors%></h4>
                 <div class="left book-page-count-display">
                   <h5 class="book-page-count"><%=book.page_count%><br>pages</h5>
                 </div>
@@ -157,60 +101,6 @@
             </div>
           </div>
         <% bg += 1; bg = 0 if bg > 6 %>
-
-        <div id="<%=book.id%>" class="modal right-sheet grey darken-2 white-text<%=" to-show" if book.id == @to_show%>">
-          <div class="modal-content" style="padding: 50px; overflow: hidden">
-            <div class="row">
-              <div class="col s8">
-                <div class="row">
-                  <h4><%=book.title%></h4>
-                </div>
-                <div class="row">
-                  <div class="col s6">
-                    <h4><%=book.authors.first.name%></h4>
-                  </div>
-                  <div class="col s6">
-                    <div class="right"><h4><%=book.page_count%><br>pages</h4></div>
-                  </div>
-                </div>
-              </div>
-              <div class="col s4">
-                <img src="<%=book.image_url%>">
-              </div>
-            </div>
-            <div class="row">
-              <h4>Reviews:</h4>
-              <div class="col s12">
-              <% if @reviews[book.id].empty? then%>
-              <h4>None.</h4>
-              <% else %>
-              <% rvbg = 0 %>
-              <%@reviews[book.id].each do |review|%>
-                <div class="card z-depth-2 <%=@backgrounds[rvbg]%> white-text">
-                  <div class="card-content">
-                    <div class="row" style="margin-bottom: 7px">
-                      <div class="col s10">
-                        <h5 style="margin: 0"><%=review.title%></h5>
-                        <p><em>By: <%=review.user.username%>, <%=review.pretty_date(:created)%></em></p>
-                      </div>
-                      <div class="col s2 valign-wrapper">
-                        <h4><%=review.rating%></h4>
-                      </div>
-                    </div>
-                    <div class="row">
-                      <div class="col s12">
-                        <p><%=review.review%></p>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-                <% rvbg += 1; rvbg = 0 if rvbg > 6 %>
-                <% end %>
-              <%end%>
-              </div>
-            </div>
-          </div>
-        </div>
         <% end %>
         </div>
 
@@ -221,12 +111,12 @@
         <div class="col s12 m6 l4">
         <% bg = 0 %>
         <% @right.each do |book| %>
-          <div id="book-<%=book.id%>" class="card z-depth-2 <%=@backgrounds[bg]%>">
+          <div id="book-<%=book.id%>" class="card z-depth-2 <%=@backgrounds[bg]%> white-text">
             <div class="card-image">
-              <a class="modal-trigger" href="#<%=book.id%>">
+              <a class="modal-trigger" href="#show-modal-<%=book.id%>">
                 <img src="<%=book.image_url%>">
               </a>
-              <span id="book-title-<%=book.id%>" class="card-title">
+              <span id="book-title-<%=book.id%>" class="card-title white-text">
                 <span class="z-depth-2 book-title flow-text">
                   <!-- <svg viewBox="0 100 100" xmlns"http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
                     <foreignObject width=auto height=auto>
@@ -239,7 +129,7 @@
             </div>
             <div id="book-content-<%=book.id%>" class="card-content flow-text">
               <div class="clearfix valign-wrapper book-row-padding" style="padding-bottom: 25px">
-                <h4 class="left book-author">By: <%=book.authors.first.name%></h4>
+                <h4 class="left book-author">By: <%=book.authors%></h4>
                 <div class="left book-page-count-display">
                   <h5 class="book-page-count"><%=book.page_count%><br>pages</h5>
                 </div>
@@ -256,62 +146,20 @@
             </div>
           </div>
         <% bg += 1; bg = 0 if bg > 6 %>
-
-        <div id="<%=book.id%>" class="modal right-sheet grey darken-2 white-text<%=" to-show" if book.id == @to_show%>">
-          <div class="modal-content" style="padding: 50px; overflow: hidden">
-            <div class="row">
-              <div class="col s8">
-                <div class="row">
-                  <h4><%=book.title%></h4>
-                </div>
-                <div class="row">
-                  <div class="col s6">
-                    <h4><%=book.authors.first.name%></h4>
-                  </div>
-                  <div class="col s6">
-                    <div class="right"><h4><%=book.page_count%><br>pages</h4></div>
-                  </div>
-                </div>
-              </div>
-              <div class="col s4">
-                <img src="<%=book.image_url%>">
-              </div>
-            </div>
-            <div class="row">
-              <h4>Reviews:</h4>
-              <div class="col s12">
-              <% if @reviews[book.id].empty? then%>
-              <h4>None.</h4>
-              <% else %>
-              <% rvbg = 0 %>
-              <%@reviews[book.id].each do |review|%>
-                <div class="card z-depth-2 <%=@backgrounds[rvbg]%> white-text">
-                  <div class="card-content">
-                    <div class="row" style="margin-bottom: 7px">
-                      <div class="col s10">
-                        <h5 style="margin: 0"><%=review.title%></h5>
-                        <p><em>By: <%=review.user.username%>, <%=review.pretty_date(:created)%></em></p>
-                      </div>
-                      <div class="col s2 valign-wrapper">
-                        <h4><%=review.rating%></h4>
-                      </div>
-                    </div>
-                    <div class="row">
-                      <div class="col s12">
-                        <p><%=review.review%></p>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-                <% rvbg += 1; rvbg = 0 if rvbg > 6 %>
-                <% end %>
-              <%end%>
-              </div>
-            </div>
-          </div>
-        </div>
         <% end %>
         </div>
+
+
+
+
+
+
+          <div id="modal1" class="modal right-sheet grey darken-2 white-text">
+            <div class="modal-content" style="padding: 50px">
+              Heck
+            </div>
+          </div>
+
       </div>
     </div>
   </body>
