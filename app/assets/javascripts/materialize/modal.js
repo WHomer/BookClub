@@ -216,6 +216,14 @@
         });
         anim(enterAnimOptions);
 
+        // Bottom sheet animation
+        if (this.el.classList.contains('right-sheet')) {
+          $.extend(enterAnimOptions, {
+            right: 0,
+            opacity: 1
+          });
+          anim(enterAnimOptions);
+
         // Normal modal animation
       } else {
         $.extend(enterAnimOptions, {
@@ -261,6 +269,14 @@
       if (this.el.classList.contains('bottom-sheet')) {
         $.extend(exitAnimOptions, {
           bottom: '-100%',
+          opacity: 0
+        });
+        anim(exitAnimOptions);
+
+      // Right sheet animation
+      if (this.el.classList.contains('right-sheet')) {
+        $.extend(exitAnimOptions, {
+          right: '-100%',
           opacity: 0
         });
         anim(exitAnimOptions);

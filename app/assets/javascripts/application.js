@@ -14,5 +14,9 @@
 //= require activestorage
 //= require turbolinks
 //= require_tree .
+//= require_tree ./materialize
 
-require_tree materialize
+document.addEventListener('DOMContentLoaded', function() {
+  var elems = document.querySelectorAll('.modal');
+  var instances = M.Modal.init(elems);
+});

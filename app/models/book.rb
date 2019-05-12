@@ -4,7 +4,9 @@ class Book < ApplicationRecord
   has_many :authors, through: :author_books
 
   def average_book_rating
-    reviews.average(:rating)
+    avg = reviews.average(:rating)
+    return avg if avg != nil
+    return 0.0
   end
 
   def count_book_reviews
@@ -26,7 +28,7 @@ class Book < ApplicationRecord
   def self.sort_average_rating(order)
     if order.upcase == 'ASC' || order.upcase == 'ASCENDING'
       select('books.*, COALESCE(AVG(reviews.rating), 0) as average_rating').left_joins(:reviews).group('books.id').order('average_rating ASC, books.title ASC')
-    elsif order.upcase == 'DESC' || order.upcase == 'DESCENDING'  
+    elsif order.upcase == 'DESC' || order.upcase == 'DESCENDING'
       select('books.*, COALESCE(avg(reviews.rating), 0) as average_rating').left_joins(:reviews).group('books.id').order('average_rating DESC, books.title ASC')
     end
   end
