@@ -3,10 +3,10 @@ class AuthorsController < ApplicationController
     #queryingstuff
     @to_show = params[:id].to_i
     authors = Author.all
-    @left = []; @mid = []; @right = []; @reviews = {}
+    @left = []; @mid = []; @right = []; @books = {}
     i = 0
     authors.each do |author|
-      @reviews[author.id] = author.reviews
+      @books[author.id] = author.books
       case i
       when 0; @left << author
       when 1; @mid << author
