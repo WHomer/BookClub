@@ -1,0 +1,20 @@
+<div>
+  <a href="/users/<%= @user.id %>?order_date=ASC">Sort Ascending</a>
+  <a href="/users/<%= @user.id %>?order_date=DESC">Sort Descending</a>
+
+  <h1><%= @user.username %> </h1>
+  <% @reviews.each do |review| %>
+    <div id="review-<%= review.id %>" class="reviews">
+      <h3><%= review.title %></h3>
+      <p><%= review.review %></p>
+      <p><strong><%= review.rating %>/5</strong></p>
+      <p><%= review.book.title %></p>
+      <img src="<%= review.book.image_url%>">
+      <p>Date Reviewed: <%= review.created_at.strftime("%D") %> </p>
+      <%= link_to 'Delete', 
+             review_path(review), 
+                         method: :delete, 
+                         data: { confirm: 'Are you sure?' } %> 
+    </div>
+  <% end %>
+</div>
