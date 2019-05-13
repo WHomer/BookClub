@@ -15,6 +15,10 @@ class BooksController < ApplicationController
       i += 1; i = 0 if i > 2
     end
 
+    @top_three = Book.stat_three_best_rated
+    @bottom_three = Book.stat_three_worst_rated
+    @top_users = []
+
     # @backgrounds = ['#c00', '#c60', '#c90', '#3c0', '#39f', '#969', '#606']
     @backgrounds = ['red darken-2', 'orange darken-4', 'amber darken-3', 'green darken-2', 'blue darken-2', 'purple darken-2']
   end
