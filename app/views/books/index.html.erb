@@ -31,7 +31,26 @@
             </a>
           </li>
         </ul>
-
+        <div class="">
+          <h5>Highest Rated:</h5>
+          <ul>
+            <% @top_three.each do |rating| %>
+              <li class="card-panel red darken-2">
+                <div class="card-content"><%= rating.title%><h5><%=rating.average_rating%></h5></div>
+              </li>
+            <% end %>
+          </ul>
+          <h5>Lowest Rated:</h5>
+          <ul>
+            <% @bottom_three.each do |rating| %>
+              <li>
+                <div class="card-panel orange darken-4">
+                  <div class="card-content"><%= rating.title%><h5><%=rating.average_rating%></h5></div>
+                </div>
+              </li>
+            <% end %>
+          </ul>
+        </div>
       </div>
     </div>
 
@@ -60,7 +79,7 @@
             </div>
             <div id="book-content-<%=book.id%>" class="card-content flow-text">
               <div class="clearfix valign-wrapper book-row-padding" style="padding-bottom: 25px">
-                <h4 class="left book-author">By:<%=book.authors.first.name%></h4>
+                <h4 class="left book-author">By: <%=book.authors.first.name%></h4>
                 <div class="left book-page-count-display">
                   <h5 class="book-page-count"><%=book.page_count%><br>pages</h5>
                 </div>
@@ -159,7 +178,7 @@
             </div>
             <div id="book-content-<%=book.id%>" class="card-content flow-text">
               <div class="clearfix valign-wrapper book-row-padding" style="padding-bottom: 25px">
-                <h4 class="left book-author">By:<%=book.authors.first.name%></h4>
+                <h4 class="left book-author">By: <%=book.authors.first.name%></h4>
                 <div class="left book-page-count-display">
                   <h5 class="book-page-count"><%=book.page_count%><br>pages</h5>
                 </div>
