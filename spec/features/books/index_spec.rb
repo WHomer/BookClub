@@ -87,8 +87,8 @@ RSpec.describe "As a visitor," do
       visit "/books"
 
       within("#book-content-#{@book1.id}") do
-        expect(page).to have_content(1)
-        expect(page).to have_content(5.0)
+        expect(page).to have_content(@book1.count_book_reviews)
+        expect(page).to have_content(@book1.average_book_rating.round(0))
       end
       within("#book-content-#{@book2.id}") do
         expect(page).to have_content(1)

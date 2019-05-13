@@ -26,4 +26,9 @@ class BooksController < ApplicationController
   def show
     redirect_to action: 'index', id: params[:id]
   end
+
+  def destroy
+    Book.destroy(params[:id])
+    redirect_to "/books"
+  end
 end
