@@ -92,7 +92,10 @@
               </div>
             </div>
             <div class="card-action">
-              Hello
+              <%= link_to 'Delete', 
+             book_path(book), 
+                         method: :delete, 
+                         data: { confirm: 'Are you sure?' } %>
             </div>
           </div>
         <% bg += 1; bg = 0 if bg > 5 %>
@@ -193,7 +196,10 @@
               </div>
             </div>
             <div class="card-action">
-              Hello
+              <%= link_to 'Delete', 
+             book_path(book), 
+                         method: :delete, 
+                         data: { confirm: 'Are you sure?' } %>
             </div>
           </div>
         <% bg += 1; bg = 0 if bg > 5 %>
@@ -294,7 +300,10 @@
               </div>
             </div>
             <div class="card-action">
-              Hello
+              <%= link_to 'Delete', 
+             book_path(book), 
+                         method: :delete, 
+                         data: { confirm: 'Are you sure?' } %>
             </div>
           </div>
         <% bg += 1; bg = 0 if bg > 5 %>

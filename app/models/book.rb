@@ -1,7 +1,8 @@
 class Book < ApplicationRecord
-  has_many :reviews
-  has_many :author_books
+  has_many :reviews, :dependent => :delete_all
+  has_many :author_books, :dependent => :delete_all
   has_many :authors, through: :author_books
+  
 
   def average_book_rating
     avg = reviews.average(:rating)
