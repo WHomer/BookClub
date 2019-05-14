@@ -3,6 +3,10 @@ class Book < ApplicationRecord
   has_many :author_books
   has_many :authors, through: :author_books
 
+  def get_year
+    
+  end
+
   def average_book_rating
     avg = reviews.average(:rating)
     return avg if avg != nil

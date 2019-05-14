@@ -17,8 +17,4 @@ class Review < ApplicationRecord
     end
     return "#{day} #{month_named} #{year} at #{hour}:#{minute}"
   end
-
-  def pretty_date_updated
-
-  end
 end
