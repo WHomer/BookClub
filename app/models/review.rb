@@ -3,6 +3,8 @@ class Review < ApplicationRecord
   belongs_to :book
   belongs_to :user
 
+  validates_presence_of :title, :review, :rating
+
   def pretty_date(source = :created)
     if source == :updated; raw = self.updated_at.to_s
     else raw = self.updated_at.to_s
