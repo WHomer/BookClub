@@ -58,7 +58,7 @@
 
     <div class="card-container" style="margin-left: 300px">
       <div class="row">
-        <div class="col s12 m6 l4">
+        <div id="left-column" class="col s12 m6 l4">
         <% bg = 0 %>
         <% @left.each do |book| %>
           <div id="book-<%=book.id%>" class="card index-card z-depth-2 <%=@backgrounds[bg]%>">
@@ -164,7 +164,7 @@
 
 
 
-        <div class="col s12 m6 l4">
+        <div id="mid-column" class="col s12 m6 l4">
         <% bg = 0 %>
         <% @mid.each do |book| %>
           <div id="book-<%=book.id%>" class="card index-card z-depth-2 <%=@backgrounds[bg]%>">
@@ -267,7 +267,7 @@
 
 
 
-        <div class="col s12 m6 l4">
+        <div id="right-column" class="col s12 m6 l4">
         <% bg = 0 %>
         <% @right.each do |book| %>
           <div id="book-<%=book.id%>" class="card index-card z-depth-2 <%=@backgrounds[bg]%>">
