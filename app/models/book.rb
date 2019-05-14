@@ -4,7 +4,6 @@ class Book < ApplicationRecord
   has_many :authors, through: :author_books
 
   validates_presence_of :title, :page_count, :year_published
-  
 
   def average_book_rating
     avg = reviews.average(:rating)
@@ -28,10 +27,10 @@ class Book < ApplicationRecord
     reviews.average('rating')
   end
 
-  def self.sort_average_rating(order)
-    if order.upcase == 'ASC' || order.upcase == 'ASCENDING'
+  def self.sort_average_rating(order = :asc)
+    if order == :asc
       select('books.*, COALESCE(AVG(reviews.rating), 0) as average_rating').left_joins(:reviews).group('books.id').order('average_rating ASC, books.title ASC')
-    elsif order.upcase == 'DESC' || order.upcase == 'DESCENDING'
+    else
       select('books.*, COALESCE(avg(reviews.rating), 0) as average_rating').left_joins(:reviews).group('books.id').order('average_rating DESC, books.title ASC')
     end
   end
@@ -44,10 +43,10 @@ class Book < ApplicationRecord
     end
   end
 
-  def self.sort_number_reviews(order)
-    if order.upcase == 'ASC' || order.upcase == 'ASCENDING'
+  def self.sort_number_reviews(order = :asc)
+    if order == :asc
       select('books.*, count(reviews.rating) as count_rating').left_joins(:reviews).group('books.id').order('count_rating ASC, books.title ASC')
-    elsif order.upcase == 'DESC' || order.upcase == 'DESC'
+    else
       select('books.*, count(reviews.rating) as count_rating').left_joins(:reviews).group('books.id').order('count_rating DESC, books.title ASC')
     end
   end

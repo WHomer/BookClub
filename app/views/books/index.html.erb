@@ -31,6 +31,51 @@
             </a>
           </li>
         </ul>
+        <div class="big-spacer"></div>
+        <ul>
+          <li class="sidenav-link">
+            <a class="white-text" style="position: relative; padding: 0" href="books?sort=avg_rating">
+              <div class="left-block"></div>
+              <h4 class="sidenav-text" style="font-size: 10pt">Sort by Average Rating (Ascending)</h4>
+            </a>
+          </li>
+          <li class="spacer-cause-css-sucks"></li>
+          <li class="sidenav-link">
+            <a class="white-text" style="position: relative; padding: 0" href="books?sort=avg_rating_desc">
+              <div class="left-block"></div>
+              <h4 class="sidenav-text" style="font-size: 10pt">Sort by Average Rating (Descending)</h4>
+            </a>
+          </li>
+          <li class="spacer-cause-css-sucks"></li>
+          <li class="sidenav-link">
+            <a class="white-text" style="position: relative; padding: 0" href="books?sort=num_pages">
+              <div class="left-block"></div>
+              <h4 class="sidenav-text" style="font-size: 10pt">Sort by Page Count (Ascending)</h4>
+            </a>
+          </li>
+          <li class="spacer-cause-css-sucks"></li>
+          <li class="sidenav-link">
+            <a class="white-text" style="position: relative; padding: 0" href="books?sort=num_pages_desc">
+              <div class="left-block"></div>
+              <h4 class="sidenav-text" style="font-size: 10pt">Sort by Page Count (Descending)</h4>
+            </a>
+          </li>
+          <li class="spacer-cause-css-sucks"></li>
+          <li class="sidenav-link">
+            <a class="white-text" style="position: relative; padding: 0" href="books?sort=num_reviews">
+              <div class="left-block"></div>
+              <h4 class="sidenav-text" style="font-size: 10pt">Sort by Most Reviews (Ascending)</h4>
+            </a>
+          </li>
+          <li class="spacer-cause-css-sucks"></li>
+          <li class="sidenav-link">
+            <a class="white-text" style="position: relative; padding: 0" href="books?sort=num_reviews_desc">
+              <div class="left-block"></div>
+              <h4 class="sidenav-text" style="font-size: 10pt">Sort by Most Reviews (Descending)</h4>
+            </a>
+          </li>
+          <li class="spacer-cause-css-sucks"></li>
+        </ul>
         <div class="">
           <h5>Highest Rated:</h5>
           <ul id="stats-highest-rated">
@@ -58,7 +103,7 @@
 
     <div class="card-container" style="margin-left: 300px">
       <div class="row">
-        <div class="col s12 m6 l4">
+        <div id="left-column" class="col s12 m6 l4">
         <% bg = 0 %>
         <% @left.each do |book| %>
           <div id="book-<%=book.id%>" class="card index-card z-depth-2 <%=@backgrounds[bg]%>">
@@ -164,7 +209,7 @@
 
 
 
-        <div class="col s12 m6 l4">
+        <div id="mid-column" class="col s12 m6 l4">
         <% bg = 0 %>
         <% @mid.each do |book| %>
           <div id="book-<%=book.id%>" class="card index-card z-depth-2 <%=@backgrounds[bg]%>">
@@ -267,7 +312,7 @@
 
 
 
-        <div class="col s12 m6 l4">
+        <div id="right-column" class="col s12 m6 l4">
         <% bg = 0 %>
         <% @right.each do |book| %>
           <div id="book-<%=book.id%>" class="card index-card z-depth-2 <%=@backgrounds[bg]%>">
