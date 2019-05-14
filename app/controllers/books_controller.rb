@@ -33,14 +33,18 @@ class BooksController < ApplicationController
     redirect_to "/books"
   end
 
-  def add; end
+  def new
+    @book = Book.new
+    require 'pry'; binding.pry
+  end
 
   def create
+    require 'pry'; binding.pry
     image_path = nil
     image_path = params[:creator][:image] if params[:creator][:image] != ""
     created = Book.new({title: params[:creator][:authors], age: params[:creator][:pages],
       year: params[:creator][:year], image_path: image_path})
     created.save
-    redirect_to '/comedians'
+    redirect_to '/books'
   end
 end

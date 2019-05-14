@@ -17,17 +17,17 @@
       <div class="topBuffer"></div>
       <div>
         <div id="addingHeader">Add New:</div>
-        <form style="width: 100%" action="/comedians/new" method="post">
+        <form style="width: 100%" action="/books/new" method="post">
           <input type="hidden" name="authenticity_token" value="<%=form_authenticity_token%>">
-          <input class="newBar" type="text" name="creator[title]" placeholder="Title..." value="">
+          <input class="newBar" type="text" name="book[title]" placeholder="Title..." value="">
           <br/><br/>
-          <input class="newBar" type="text" name="creator[authors]" placeholder="Authors..." value="">
+          <input class="newBar" type="text" name="book[authors]" placeholder="Authors..." value="">
           <br/><br/>
-          <input class="newBar" type="text" name="creator[pages]" placeholder="Page Count..." value="">
+          <input class="newBar" type="text" name="book[pages]" placeholder="Page Count..." value="">
           <br/><br/>
-          <input class="newBar" type="text" name="creator[year]" placeholder="Year Published..." value="">
+          <input class="newBar" type="text" name="book[year]" placeholder="Year Published..." value="">
           <br/><br/>
-          <input class="newBar" type="text" name="creator[image]" placeholder="Path to Image..." value="">
+          <input class="newBar" type="text" name="book[image]" placeholder="Path to Image..." value="">
           <br/><br/><br/>
           <label style="margin: 0px 360px; float: left">
             <input type="submit" style="display: none"/>
