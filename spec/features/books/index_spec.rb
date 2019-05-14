@@ -38,6 +38,21 @@ RSpec.describe "As a visitor," do
       @reviewinator.reviews.create! title: 'It was E book', review: 'heccccc', rating: 1, book_id: @book5.id
     end
 
+    it "can link to other indexes" do
+      visit "/books"
+
+      click_link "Books"
+      expect(current_path).to eq "/books"
+
+      visit "/books"
+      click_link "Authors"
+      expect(current_path).to eq "/authors"
+
+      visit "/books"
+      click_link "Users"
+      expect(current_path).to eq "/users"
+    end
+
     it "sees a title" do
       visit "/books"
 
