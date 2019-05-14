@@ -14,7 +14,10 @@ joe = User.create!(username: 'Joe Swanson')
 
 # authors
 jk_rowling = Author.create!(name: 'J. K. Rowling', image_url: 'https://pics.librarything.com/picsizes/3e/9b/3e9bc00722b81c46367767669774330414f6744.jpg')
-dumbledore = Author.create!(name: 'Albus Dumbledore', image_url: 'https://pics.librarything.com/picsizes/29/8a/298a29de773bddc6368334f6e514330414f6744.jpg')
+dumbledore_1 = Author.create!(name: 'Albus Dumbledore 1', image_url: 'https://pics.librarything.com/picsizes/29/8a/298a29de773bddc6368334f6e514330414f6744.jpg')
+dumbledore_2 = Author.create!(name: 'Albus Dumbledore 2', image_url: 'https://pics.librarything.com/picsizes/29/8a/298a29de773bddc6368334f6e514330414f6744.jpg')
+dumbledore_3 = Author.create!(name: 'Albus Dumbledore 3', image_url: 'https://pics.librarything.com/picsizes/29/8a/298a29de773bddc6368334f6e514330414f6744.jpg')
+
 
 # books
 hp_prisoner = Book.create!(title: "Harry Potter and the Prisoner of Azkaban", page_count: 1234 , year_published: "2010-01-01" , image_url: "https://pics.cdn.librarything.com/picsizes/dd/b9/ddb96bc09edd9c6593241315251434f414f4141.jpg" )
@@ -33,7 +36,9 @@ cuckoo = Book.create!(title: "The Cuckoo's Calling", page_count: 634 , year_publ
 silkworm = Book.create!(title: "The Silkworm", page_count: 236 , year_published: "2005-01-01" , image_url: "https://images-na.ssl-images-amazon.com/images/P/0316206873.01._SX142_SY224_SCLZZZZZZZ_.jpg" )
 
 jk_rowling.books << [hp_prisoner, hp_sorcerer, hp_chamber, hp_half, hp_order, hp_goblet, hp_dealthy, hp_beedle, hp_fantastic, hp_quidditch, casual_vacancy, hp_cursed, cuckoo, silkworm]
-dumbledore.books << [hp_fantastic, hp_sorcerer, hp_half, hp_order]
+dumbledore_1.books << [hp_fantastic, hp_sorcerer, hp_half, hp_order]
+dumbledore_2.books << [hp_fantastic, hp_sorcerer, hp_half, hp_order]
+dumbledore_3.books << [hp_fantastic, hp_sorcerer, hp_half, hp_order]
 
 #reviews
 meg.reviews.create!(title: 'It was only OK', review: '1asdfasdfadsfadsfadfasdfa', rating: 4, book_id: hp_prisoner.id)
