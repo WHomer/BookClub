@@ -91,20 +91,36 @@ RSpec.describe "As a visitor," do
         expect(page).to have_content(@book1.average_book_rating.round(0))
       end
       within("#book-content-#{@book2.id}") do
-        expect(page).to have_content(1)
-        expect(page).to have_content(4.0)
+        expect(page).to have_content(@book2.count_book_reviews)
+        expect(page).to have_content(@book2.average_book_rating.round(0))
       end
       within("#book-content-#{@book3.id}") do
-        expect(page).to have_content(1)
-        expect(page).to have_content(3.0)
+        expect(page).to have_content(@book3.count_book_reviews)
+        expect(page).to have_content(@book3.average_book_rating.round(0))
       end
       within("#book-content-#{@book4.id}") do
-        expect(page).to have_content(1)
-        expect(page).to have_content(2.0)
+        expect(page).to have_content(@book4.count_book_reviews)
+        expect(page).to have_content(@book4.average_book_rating.round(0))
       end
       within("#book-content-#{@book5.id}") do
-        expect(page).to have_content(1)
-        expect(page).to have_content(1.0)
+        expect(page).to have_content(@book5.count_book_reviews)
+        expect(page).to have_content(@book5.average_book_rating.round(0))
+      end
+    end
+
+    it "has statistics" do
+      visit "/books"
+
+      within "#stats-highest-rated" do
+        expect(page).to have_content(@book1.title)
+        expect(page).to have_content(@book2.title)
+        expect(page).to have_content(@book3.title)
+      end
+
+      within "#stats-lowest-rated" do
+        expect(page).to have_content(@book3.title)
+        expect(page).to have_content(@book4.title)
+        expect(page).to have_content(@book5.title)
       end
     end
   end

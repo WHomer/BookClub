@@ -1,14 +1,14 @@
 {
   "RSpec": {
     "coverage": {
-      "/Users/william/turing/2module/projects/BookClub/config/environment.rb": [
+      "/home/main/Projects/Turing/BookClub/config/environment.rb": [
         null,
         1,
         null,
         null,
         1
       ],
-      "/Users/william/turing/2module/projects/BookClub/config/application.rb": [
+      "/home/main/Projects/Turing/BookClub/config/application.rb": [
         1,
         null,
         1,
@@ -29,13 +29,13 @@
         null,
         null
       ],
-      "/Users/william/turing/2module/projects/BookClub/config/boot.rb": [
+      "/home/main/Projects/Turing/BookClub/config/boot.rb": [
         1,
         null,
         1,
         1
       ],
-      "/Users/william/turing/2module/projects/BookClub/config/environments/test.rb": [
+      "/home/main/Projects/Turing/BookClub/config/environments/test.rb": [
         1,
         null,
         null,
@@ -83,7 +83,7 @@
         null,
         null
       ],
-      "/Users/william/turing/2module/projects/BookClub/config/initializers/application_controller_renderer.rb": [
+      "/home/main/Projects/Turing/BookClub/config/initializers/application_controller_renderer.rb": [
         null,
         null,
         null,
@@ -93,7 +93,7 @@
         null,
         null
       ],
-      "/Users/william/turing/2module/projects/BookClub/config/initializers/assets.rb": [
+      "/home/main/Projects/Turing/BookClub/config/initializers/assets.rb": [
         null,
         null,
         null,
@@ -109,7 +109,7 @@
         null,
         null
       ],
-      "/Users/william/turing/2module/projects/BookClub/config/initializers/backtrace_silencers.rb": [
+      "/home/main/Projects/Turing/BookClub/config/initializers/backtrace_silencers.rb": [
         null,
         null,
         null,
@@ -118,7 +118,7 @@
         null,
         null
       ],
-      "/Users/william/turing/2module/projects/BookClub/config/initializers/content_security_policy.rb": [
+      "/home/main/Projects/Turing/BookClub/config/initializers/content_security_policy.rb": [
         null,
         null,
         null,
@@ -145,20 +145,20 @@
         null,
         null
       ],
-      "/Users/william/turing/2module/projects/BookClub/config/initializers/cookies_serializer.rb": [
+      "/home/main/Projects/Turing/BookClub/config/initializers/cookies_serializer.rb": [
         null,
         null,
         null,
         null,
         1
       ],
-      "/Users/william/turing/2module/projects/BookClub/config/initializers/filter_parameter_logging.rb": [
+      "/home/main/Projects/Turing/BookClub/config/initializers/filter_parameter_logging.rb": [
         null,
         null,
         null,
         1
       ],
-      "/Users/william/turing/2module/projects/BookClub/config/initializers/inflections.rb": [
+      "/home/main/Projects/Turing/BookClub/config/initializers/inflections.rb": [
         null,
         null,
         null,
@@ -176,13 +176,13 @@
         null,
         null
       ],
-      "/Users/william/turing/2module/projects/BookClub/config/initializers/mime_types.rb": [
+      "/home/main/Projects/Turing/BookClub/config/initializers/mime_types.rb": [
         null,
         null,
         null,
         null
       ],
-      "/Users/william/turing/2module/projects/BookClub/config/initializers/wrap_parameters.rb": [
+      "/home/main/Projects/Turing/BookClub/config/initializers/wrap_parameters.rb": [
         null,
         null,
         null,
@@ -198,7 +198,7 @@
         null,
         null
       ],
-      "/Users/william/turing/2module/projects/BookClub/config/routes.rb": [
+      "/home/main/Projects/Turing/BookClub/config/routes.rb": [
         1,
         1,
         null,
@@ -208,45 +208,25 @@
         1,
         null
       ],
-      "/Users/william/turing/2module/projects/BookClub/app/helpers/application_helper.rb": [
+      "/home/main/Projects/Turing/BookClub/app/helpers/application_helper.rb": [
         1,
         null
       ],
-      "/Users/william/turing/2module/projects/BookClub/app/models/user.rb": [
+      "/home/main/Projects/Turing/BookClub/app/models/book.rb": [
+        1,
+        1,
         1,
         1,
         null,
+        null,
         1,
+        25,
+        25,
         0,
         null,
         null,
         1,
-        0,
-        null,
-        null
-      ],
-      "/Users/william/turing/2module/projects/BookClub/app/models/application_record.rb": [
-        1,
-        1,
-        null
-      ],
-      "/Users/william/turing/2module/projects/BookClub/app/models/author.rb": [
-        1,
-        1,
-        1,
-        null
-      ],
-      "/Users/william/turing/2module/projects/BookClub/app/models/book.rb": [
-        1,
-        1,
-        1,
-        1,
-        null,
-        null,
-        1,
-        0,
-        0,
-        0,
+        25,
         null,
         null,
         1,
@@ -258,11 +238,7 @@
         null,
         null,
         1,
-        0,
-        null,
-        null,
-        1,
-        0,
+        24,
         null,
         null,
         1,
@@ -290,11 +266,11 @@
         null,
         null,
         1,
-        0,
+        4,
         null,
         null,
         1,
-        0,
+        4,
         null,
         null,
         1,
@@ -303,32 +279,56 @@
         null,
         null
       ],
-      "/Users/william/turing/2module/projects/BookClub/app/models/author_book.rb": [
+      "/home/main/Projects/Turing/BookClub/app/models/application_record.rb": [
+        1,
+        1,
+        null
+      ],
+      "/home/main/Projects/Turing/BookClub/app/models/author.rb": [
         1,
         1,
         1,
         null
       ],
-      "/Users/william/turing/2module/projects/BookClub/app/models/review.rb": [
+      "/home/main/Projects/Turing/BookClub/app/models/user.rb": [
+        1,
+        1,
+        null,
+        1,
+        0,
+        null,
+        null,
+        1,
+        0,
+        null,
+        null
+      ],
+      "/home/main/Projects/Turing/BookClub/app/models/author_book.rb": [
+        1,
+        1,
+        1,
+        null
+      ],
+      "/home/main/Projects/Turing/BookClub/app/models/review.rb": [
         1,
         null,
         1,
         1,
         null,
         1,
+        20,
+        20,
+        null,
+        20,
+        20,
+        20,
+        20,
+        0,
+        0,
         0,
         0,
         null,
-        0,
-        0,
-        0,
-        0,
-        0,
-        0,
-        0,
-        0,
-        null,
-        0,
+        20,
         null,
         null,
         1,
@@ -336,44 +336,48 @@
         null,
         null
       ],
-      "/Users/william/turing/2module/projects/BookClub/app/controllers/authors_controller.rb": [
+      "/home/main/Projects/Turing/BookClub/app/controllers/books_controller.rb": [
         1,
         1,
         null,
-        2,
-        2,
-        2,
-        2,
-        2,
-        3,
-        3,
-        2,
+        4,
+        4,
+        4,
+        4,
+        4,
+        20,
+        20,
+        8,
+        8,
+        4,
+        null,
+        20,
+        null,
+        null,
+        4,
+        4,
+        4,
+        null,
+        null,
+        4,
+        4,
+        null,
+        null,
         1,
         0,
         null,
-        3,
-        null,
-        null,
-        null,
-        2,
-        null,
         null,
         1,
         0,
-        null,
-        null,
-        1,
-        1,
-        1,
-        null,
+        0,
         null,
         null
       ],
-      "/Users/william/turing/2module/projects/BookClub/app/controllers/application_controller.rb": [
+      "/home/main/Projects/Turing/BookClub/app/controllers/application_controller.rb": [
         1,
         null
       ]
     },
-    "timestamp": 1557792389
+    "timestamp": 1557855517
   }
 }

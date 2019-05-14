@@ -33,19 +33,19 @@
         </ul>
         <div class="">
           <h5>Highest Rated:</h5>
-          <ul>
-            <% @top_three.each do |rating| %>
+          <ul id="stats-highest-rated">
+            <% @top_three.each do |book| %>
               <li class="card-panel red darken-2">
-                <div class="card-content"><%= rating.title%><h5><%=rating.average_rating%></h5></div>
+                <div class="card-content"><%= book.title%><h5><%=book.average_rating%></h5></div>
               </li>
             <% end %>
           </ul>
           <h5>Lowest Rated:</h5>
-          <ul>
-            <% @bottom_three.each do |rating| %>
+          <ul id="stats-lowest-rated">
+            <% @bottom_three.each do |book| %>
               <li>
                 <div class="card-panel orange darken-4">
-                  <div class="card-content"><%= rating.title%><h5><%=rating.average_rating%></h5></div>
+                  <div class="card-content"><%= book.title%><h5><%=book.average_rating%></h5></div>
                 </div>
               </li>
             <% end %>
