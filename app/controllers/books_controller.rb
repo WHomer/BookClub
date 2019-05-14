@@ -21,6 +21,7 @@ class BooksController < ApplicationController
 
     # @backgrounds = ['#c00', '#c60', '#c90', '#3c0', '#39f', '#969', '#606']
     @backgrounds = ['red darken-2', 'orange darken-4', 'amber darken-3', 'green darken-2', 'blue darken-2', 'purple darken-2']
+    @foregrounds = ['red lighten-1', 'orange', 'amber lighten-1', 'green lighten-2', 'blue lighten-2', 'purple lighten-2']
   end
 
   def show
