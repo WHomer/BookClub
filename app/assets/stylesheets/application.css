@@ -41,3 +41,10 @@
 content: "";
 clear: both;
 display: table;}
+
+.topBuffer {background: #333; height: 97px; margin: -8px -8px 0px -8px;}
+#topBar {background: #333; margin: -8px -8px 0px -8px; position: fixed; z-index: 9999; width: 100%; height: auto}
+#title {padding: 18px 30px 18px 18px; font: 30pt Segoe UI, Noto Sans, Arial, sans-serif; color: white; float: left}
+#addingHeader {font: 25pt SegoeUI, Noto Sans, Arial, sans-serif; color: white; margin: 0px 0px 15px 0px}
+.newBar {height: 45px; background: #555; border: none; padding: 0px 60px 0px 15px; color: white; font: 18pt Segoe UI, Noto Sans, Arial, sans-serif; float: left}
+.newBar::placeholder {color: white}

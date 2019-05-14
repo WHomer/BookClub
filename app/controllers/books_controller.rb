@@ -32,4 +32,19 @@ class BooksController < ApplicationController
     Book.destroy(params[:id])
     redirect_to "/books"
   end
+
+  def new
+  end
+
+  def create
+    image_path = nil
+    image_path = params[:book][:image] if params[:book][:image] != ""
+    new_book = Book.create({title: params[:book][:title].titleize, page_count: params[:book][:pages],
+      year_published: "01-01-#{params[:book][:year]}".to_date, image_url: image_path})
+    authors_list = params[:book][:authors].split(", ")
+    authors_list.each do |author|
+      Author.find_or_create_by(name: author.titleize).books << new_book
+    end
+    redirect_to '/books'
+  end
 end
