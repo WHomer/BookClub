@@ -73,11 +73,14 @@
               </div>
             </div> -->
             <div class="card-action">
-              Hello
+              <%= link_to 'Delete', 
+             author_path(author), 
+                         method: :delete, 
+                         data: { confirm: 'Are you sure?' } %>
             </div>
           </div>
         <% bg += 1; bg = 0 if bg > 5 %>
-
+  
         <div id="author-<%=author.id%>" class="modal right-sheet grey darken-2<%=" to-show" if author.id == @to_show%>">
           <div class="modal-content" style="padding: 50px">
             <div class="row">
@@ -163,7 +166,10 @@
                 </div>
               </div> -->
               <div class="card-action">
-                Hello
+                <%= link_to 'Delete', 
+             author_path(author), 
+                         method: :delete, 
+                         data: { confirm: 'Are you sure?' } %>
               </div>
             </div>
           <% bg += 1; bg = 0 if bg > 5 %>
@@ -253,7 +259,10 @@
                 </div>
               </div> -->
               <div class="card-action">
-                Hello
+                <%= link_to 'Delete', 
+             author_path(author), 
+                         method: :delete, 
+                         data: { confirm: 'Are you sure?' } %>
               </div>
             </div>
           <% bg += 1; bg = 0 if bg > 5 %>
