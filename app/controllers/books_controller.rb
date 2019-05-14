@@ -32,4 +32,15 @@ class BooksController < ApplicationController
     Book.destroy(params[:id])
     redirect_to "/books"
   end
+
+  def add; end
+
+  def create
+    image_path = nil
+    image_path = params[:creator][:image] if params[:creator][:image] != ""
+    created = Book.new({title: params[:creator][:authors], age: params[:creator][:pages],
+      year: params[:creator][:year], image_path: image_path})
+    created.save
+    redirect_to '/comedians'
+  end
 end
