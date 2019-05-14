@@ -151,12 +151,81 @@ RSpec.describe "As a visitor," do
         expect(page.all(".card-title")[0]).to have_content(@book5.title)
         expect(page.all(".card-title")[1]).to have_content(@book2.title)
       end
-
       within "#mid-column" do
         expect(page.all(".card-title")[0]).to have_content(@book4.title)
         expect(page.all(".card-title")[1]).to have_content(@book1.title)
       end
+      within "#right-column" do
+        expect(page.all(".card-title")[0]).to have_content(@book3.title)
+      end
 
+      visit "/books?sort=avg_rating_desc"
+      within "#left-column" do
+        expect(page.all(".card-title")[0]).to have_content(@book1.title)
+        expect(page.all(".card-title")[1]).to have_content(@book4.title)
+      end
+      within "#mid-column" do
+        expect(page.all(".card-title")[0]).to have_content(@book2.title)
+        expect(page.all(".card-title")[1]).to have_content(@book5.title)
+      end
+      within "#right-column" do
+        expect(page.all(".card-title")[0]).to have_content(@book3.title)
+      end
+    end
+
+    it "can sort by page count" do
+      visit "/books?sort=num_pages"
+
+      within "#left-column" do
+        expect(page.all(".card-title")[0]).to have_content(@book1.title)
+        expect(page.all(".card-title")[1]).to have_content(@book4.title)
+      end
+      within "#mid-column" do
+        expect(page.all(".card-title")[0]).to have_content(@book2.title)
+        expect(page.all(".card-title")[1]).to have_content(@book5.title)
+      end
+      within "#right-column" do
+        expect(page.all(".card-title")[0]).to have_content(@book3.title)
+      end
+
+      visit "/books?sort=num_pages_desc"
+      within "#left-column" do
+        expect(page.all(".card-title")[0]).to have_content(@book5.title)
+        expect(page.all(".card-title")[1]).to have_content(@book2.title)
+      end
+      within "#mid-column" do
+        expect(page.all(".card-title")[0]).to have_content(@book4.title)
+        expect(page.all(".card-title")[1]).to have_content(@book1.title)
+      end
+      within "#right-column" do
+        expect(page.all(".card-title")[0]).to have_content(@book3.title)
+      end
+    end
+
+    it "can sort by num reviews" do
+      visit "/books?sort=num_reviews"
+
+      within "#left-column" do
+        expect(page.all(".card-title")[0]).to have_content(@book5.title)
+        expect(page.all(".card-title")[1]).to have_content(@book2.title)
+      end
+      within "#mid-column" do
+        expect(page.all(".card-title")[0]).to have_content(@book4.title)
+        expect(page.all(".card-title")[1]).to have_content(@book1.title)
+      end
+      within "#right-column" do
+        expect(page.all(".card-title")[0]).to have_content(@book3.title)
+      end
+
+      visit "/books?sort=num_reviews_desc"
+      within "#left-column" do
+        expect(page.all(".card-title")[0]).to have_content(@book1.title)
+        expect(page.all(".card-title")[1]).to have_content(@book4.title)
+      end
+      within "#mid-column" do
+        expect(page.all(".card-title")[0]).to have_content(@book2.title)
+        expect(page.all(".card-title")[1]).to have_content(@book5.title)
+      end
       within "#right-column" do
         expect(page.all(".card-title")[0]).to have_content(@book3.title)
       end
