@@ -1,11 +1,24 @@
 class BooksController < ApplicationController
   def index
-    #queryingstuff
+    if params[:sort] == "avg_rating"
+      books = Book.sort_average_rating
+    elsif params[:sort] == "avg_rating_desc"
+      books = Book.sort_average_rating :desc
+    elsif params[:sort] == "num_pages"
+      books = Book.order :page_count
+    elsif params[:sort] == "num_pages_desc"
+      books = Book.order page_count: :desc
+    elsif params[:sort] == "num_reviews"
+      books = Book.sort_number_reviews
+    elsif params[:sort] == "num_reviews_desc"
+      books = Book.sort_number_reviews :desc
+    else
+      books = Book
+    end
     @to_show = params[:id].to_i
-    books = Book.all
     @left = []; @mid = []; @right = []; @reviews = {}
     i = 0
-    books.each do |book|
+    books.all.each do |book|
       @reviews[book.id] = book.reviews
       case i
       when 0; @left << book
