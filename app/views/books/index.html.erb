@@ -97,6 +97,7 @@
               <%= link_to "<button>Delete</button>".html_safe, book_path(book),
                 method: :delete, data: { confirm: 'Are you sure?' },
                 :class=>"waves-effect waves-light btn #{@foregrounds[bg]}" %>
+              <%= link_to "New review".html_safe, new_review_path(book) %>
               <a class="waves-effect waves-light btn <%=@foregrounds[bg]%>">Delete</a>
             </div>
           </div>
@@ -201,6 +202,7 @@
               <%= link_to "<button>Delete</button>".html_safe, book_path(book),
                 method: :delete, data: { confirm: 'Are you sure?' },
                 :class=>"waves-effect waves-light btn #{@foregrounds[bg]}" %>
+              <%= link_to "New review".html_safe, new_review_path(book) %>
             </div>
           </div>
         <% bg += 1; bg = 0 if bg > 5 %>
@@ -304,6 +306,7 @@
               <%= link_to "<button>Delete</button>".html_safe, book_path(book),
                 method: :delete, data: { confirm: 'Are you sure?' },
                 :class=>"waves-effect waves-light btn #{@foregrounds[bg]}" %>
+                <%= link_to "New review".html_safe, new_review_path(book) %>
             </div>
           </div>
         <% bg += 1; bg = 0 if bg > 5 %>
