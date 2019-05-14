@@ -32,10 +32,15 @@ RSpec.describe "As a visitor," do
 
       @reviewinator = User.create! username: "Reviewinator"
       @reviewinator.reviews.create! title: 'It was A book', review: 'hec', rating: 5, book_id: @book1.id
+      @reviewinator.reviews.create! title: 'It was A book', review: 'hec', rating: 5, book_id: @book1.id
+      @reviewinator.reviews.create! title: 'It was A book', review: 'hec', rating: 5, book_id: @book1.id
+      @reviewinator.reviews.create! title: 'It was A book', review: 'hec', rating: 5, book_id: @book1.id
+      @reviewinator.reviews.create! title: 'It was B book', review: 'hecc', rating: 4, book_id: @book2.id
+      @reviewinator.reviews.create! title: 'It was B book', review: 'hecc', rating: 4, book_id: @book2.id
       @reviewinator.reviews.create! title: 'It was B book', review: 'hecc', rating: 4, book_id: @book2.id
       @reviewinator.reviews.create! title: 'It was C book', review: 'heccc', rating: 3, book_id: @book3.id
+      @reviewinator.reviews.create! title: 'It was C book', review: 'heccc', rating: 3, book_id: @book3.id
       @reviewinator.reviews.create! title: 'It was D book', review: 'hecccc', rating: 2, book_id: @book4.id
-      @reviewinator.reviews.create! title: 'It was E book', review: 'heccccc', rating: 1, book_id: @book5.id
     end
 
     it "can link to other indexes" do
@@ -136,6 +141,24 @@ RSpec.describe "As a visitor," do
         expect(page).to have_content(@book3.title)
         expect(page).to have_content(@book4.title)
         expect(page).to have_content(@book5.title)
+      end
+    end
+
+    it "can sort by avg rating" do
+      visit "/books?sort=avg_rating"
+
+      within "#left-column" do
+        expect(page.all(".card-title")[0]).to have_content(@book5.title)
+        expect(page.all(".card-title")[1]).to have_content(@book2.title)
+      end
+
+      within "#mid-column" do
+        expect(page.all(".card-title")[0]).to have_content(@book4.title)
+        expect(page.all(".card-title")[1]).to have_content(@book1.title)
+      end
+
+      within "#right-column" do
+        expect(page.all(".card-title")[0]).to have_content(@book3.title)
       end
     end
   end
