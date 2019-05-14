@@ -34,17 +34,17 @@ class BooksController < ApplicationController
   end
 
   def new
-    @book = Book.new
-    require 'pry'; binding.pry
   end
 
   def create
-    require 'pry'; binding.pry
     image_path = nil
-    image_path = params[:creator][:image] if params[:creator][:image] != ""
-    created = Book.new({title: params[:creator][:authors], age: params[:creator][:pages],
-      year: params[:creator][:year], image_path: image_path})
-    created.save
+    image_path = params[:book][:image] if params[:book][:image] != ""
+    new_book = Book.create({title: params[:book][:title].titleize, page_count: params[:book][:pages],
+      year_published: "01-01-#{params[:book][:year]}".to_date, image_url: image_path})
+    authors_list = params[:book][:authors].split(", ")
+    authors_list.each do |author|
+      Author.find_or_create_by(name: author.titleize).books << new_book
+    end
     redirect_to '/books'
   end
 end

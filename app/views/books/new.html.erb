@@ -17,7 +17,7 @@
       <div class="topBuffer"></div>
       <div>
         <div id="addingHeader">Add New:</div>
-        <form style="width: 100%" action="/books/new" method="post">
+        <form style="width: 100%" action="/books" method="post">
           <input type="hidden" name="authenticity_token" value="<%=form_authenticity_token%>">
           <input class="newBar" type="text" name="book[title]" placeholder="Title..." value="">
           <br/><br/>
@@ -30,7 +30,7 @@
           <input class="newBar" type="text" name="book[image]" placeholder="Path to Image..." value="">
           <br/><br/><br/>
           <label style="margin: 0px 360px; float: left">
-            <input type="submit" style="display: none"/>
+            <input id="submit-link" type="submit" name="submit" style="display: none"/>
             <svg width="11mm" height="11mm" viewBox="0 0 5.5 5.5">
               <g transform="translate(.14376 -291.64)">
                 <circle cx="2.6062" cy="294.39" r="2.5" fill="none" stroke="#fff" stroke-width=".5"/>
