@@ -169,6 +169,60 @@
               </div>
             </div>
             <div class="row">
+              <h4>Stats:</h4>
+              <p>Average: <%= book.average_book_rating.round(0)%></p>
+              <p>Best reviews:
+                <% if book.top_three_reviews.empty? then%>
+                None.
+                <% else %>
+                <% rvbg = 0 %>
+                <%book.top_three_reviews.each do |review|%>
+                <a class="white-text" href="/users/<%=review.user.id%>">
+                  <div class="card index-card z-depth-2 <%=@backgrounds[rvbg]%>">
+                    <div class="card-content">
+                      <div class="row" style="margin-bottom: 7px">
+                        <div class="col s10">
+                          <h5 style="margin: 0"><%=review.title%></h5>
+                          <p><em>By: <%=review.user.username%>, <%=review.pretty_date(:created)%></em></p>
+                        </div>
+                        <div class="col s2 valign-wrapper">
+                          <h4><%=review.rating%></h4>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </a>
+                <% rvbg += 1; rvbg = 0 if rvbg > 5 %>
+                <% end %>
+                <%end%>
+              </p>
+              <p>Worst reviews:
+                <% if book.bottom_three_reviews.empty? then%>
+                None.
+                <% else %>
+                <% rvbg = 0 %>
+                <%book.bottom_three_reviews.each do |review|%>
+                <a class="white-text" href="/users/<%=review.user.id%>">
+                  <div class="card index-card z-depth-2 <%=@backgrounds[rvbg]%>">
+                    <div class="card-content">
+                      <div class="row" style="margin-bottom: 7px">
+                        <div class="col s10">
+                          <h5 style="margin: 0"><%=review.title%></h5>
+                          <p><em>By: <%=review.user.username%>, <%=review.pretty_date(:created)%></em></p>
+                        </div>
+                        <div class="col s2 valign-wrapper">
+                          <h4><%=review.rating%></h4>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </a>
+                <% rvbg += 1; rvbg = 0 if rvbg > 5 %>
+                <% end %>
+                <%end%>
+              </p>
+            </div>
+            <div class="row">
               <h4>Reviews:</h4>
               <div class="col s12">
               <% if @reviews[book.id].empty? then%>
@@ -273,6 +327,93 @@
               </div>
             </div>
             <div class="row">
+              <h4>Stats:</h4>
+              <p>Average: <%= book.average_book_rating.round(0)%></p>
+              <p>Best reviews:
+                <% if book.top_three_reviews.empty? then%>
+                None.
+                <% else %>
+                <% rvbg = 0 %>
+                <%book.top_three_reviews.each do |review|%>
+                <a class="white-text" href="/users/<%=review.user.id%>">
+                  <div class="card index-card z-depth-2 <%=@backgrounds[rvbg]%>">
+                    <div class="card-content">
+                      <div class="row" style="margin-bottom: 7px">
+                        <div class="col s10">
+                          <h5 style="margin: 0"><%=review.title%></h5>
+                          <p><em>By: <%=review.user.username%>, <%=review.pretty_date(:created)%></em></p>
+                        </div>
+                        <div class="col s2 valign-wrapper">
+                          <h4><%=review.rating%></h4>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </a>
+                <% rvbg += 1; rvbg = 0 if rvbg > 5 %>
+                <% end %>
+                <%end%>
+              </p>
+              <p>Worst reviews:
+                <% if book.bottom_three_reviews.empty? then%>
+                None.
+                <% else %>
+                <% rvbg = 0 %>
+                <%book.bottom_three_reviews.each do |review|%>
+                <a class="white-text" href="/users/<%=review.user.id%>">
+                  <div class="card index-card z-depth-2 <%=@backgrounds[rvbg]%>">
+                    <div class="card-content">
+                      <div class="row" style="margin-bottom: 7px">
+                        <div class="col s10">
+                          <h5 style="margin: 0"><%=review.title%></h5>
+                          <p><em>By: <%=review.user.username%>, <%=review.pretty_date(:created)%></em></p>
+                        </div>
+                        <div class="col s2 valign-wrapper">
+                          <h4><%=review.rating%></h4>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </a>
+                <% rvbg += 1; rvbg = 0 if rvbg > 5 %>
+                <% end %>
+                <%end%>
+              </p>
+            </div>
+            <div class="row">
+              <h4>Reviews:</h4>
+              <div class="col s12">
+              <% if @reviews[book.id].empty? then%>
+              <h4>None.</h4>
+              <% else %>
+              <% rvbg = 0 %>
+              <%@reviews[book.id].each do |review|%>
+              <a class="white-text" href="/users/<%=review.user.id%>">
+                <div class="card index-card z-depth-2 <%=@backgrounds[rvbg]%>">
+                  <div class="card-content">
+                    <div class="row" style="margin-bottom: 7px">
+                      <div class="col s10">
+                        <h5 style="margin: 0"><%=review.title%></h5>
+                        <p><em>By: <%=review.user.username%>, <%=review.pretty_date(:created)%></em></p>
+                      </div>
+                      <div class="col s2 valign-wrapper">
+                        <h4><%=review.rating%></h4>
+                      </div>
+                    </div>
+                    <div class="row">
+                      <div class="col s12">
+                        <p><%=review.review%></p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </a>
+              <% rvbg += 1; rvbg = 0 if rvbg > 5 %>
+              <% end %>
+              <%end%>
+              </div>
+            </div>
+            <div class="row">
               <h4>Reviews:</h4>
               <div class="col s12">
               <% if @reviews[book.id].empty? then%>
@@ -374,6 +515,93 @@
               </div>
               <div class="col s4">
                 <img src="<%=book.image_url%>">
+              </div>
+            </div>
+            <div class="row">
+              <h4>Stats:</h4>
+              <p>Average: <%= book.average_book_rating.round(0)%></p>
+              <p>Best reviews:
+                <% if book.top_three_reviews.empty? then%>
+                None.
+                <% else %>
+                <% rvbg = 0 %>
+                <%book.top_three_reviews.each do |review|%>
+                <a class="white-text" href="/users/<%=review.user.id%>">
+                  <div class="card index-card z-depth-2 <%=@backgrounds[rvbg]%>">
+                    <div class="card-content">
+                      <div class="row" style="margin-bottom: 7px">
+                        <div class="col s10">
+                          <h5 style="margin: 0"><%=review.title%></h5>
+                          <p><em>By: <%=review.user.username%>, <%=review.pretty_date(:created)%></em></p>
+                        </div>
+                        <div class="col s2 valign-wrapper">
+                          <h4><%=review.rating%></h4>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </a>
+                <% rvbg += 1; rvbg = 0 if rvbg > 5 %>
+                <% end %>
+                <%end%>
+              </p>
+              <p>Worst reviews:
+                <% if book.bottom_three_reviews.empty? then%>
+                None.
+                <% else %>
+                <% rvbg = 0 %>
+                <%book.bottom_three_reviews.each do |review|%>
+                <a class="white-text" href="/users/<%=review.user.id%>">
+                  <div class="card index-card z-depth-2 <%=@backgrounds[rvbg]%>">
+                    <div class="card-content">
+                      <div class="row" style="margin-bottom: 7px">
+                        <div class="col s10">
+                          <h5 style="margin: 0"><%=review.title%></h5>
+                          <p><em>By: <%=review.user.username%>, <%=review.pretty_date(:created)%></em></p>
+                        </div>
+                        <div class="col s2 valign-wrapper">
+                          <h4><%=review.rating%></h4>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </a>
+                <% rvbg += 1; rvbg = 0 if rvbg > 5 %>
+                <% end %>
+                <%end%>
+              </p>
+            </div>
+            <div class="row">
+              <h4>Reviews:</h4>
+              <div class="col s12">
+              <% if @reviews[book.id].empty? then%>
+              <h4>None.</h4>
+              <% else %>
+              <% rvbg = 0 %>
+              <%@reviews[book.id].each do |review|%>
+              <a class="white-text" href="/users/<%=review.user.id%>">
+                <div class="card index-card z-depth-2 <%=@backgrounds[rvbg]%>">
+                  <div class="card-content">
+                    <div class="row" style="margin-bottom: 7px">
+                      <div class="col s10">
+                        <h5 style="margin: 0"><%=review.title%></h5>
+                        <p><em>By: <%=review.user.username%>, <%=review.pretty_date(:created)%></em></p>
+                      </div>
+                      <div class="col s2 valign-wrapper">
+                        <h4><%=review.rating%></h4>
+                      </div>
+                    </div>
+                    <div class="row">
+                      <div class="col s12">
+                        <p><%=review.review%></p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </a>
+              <% rvbg += 1; rvbg = 0 if rvbg > 5 %>
+              <% end %>
+              <%end%>
               </div>
             </div>
             <div class="row">
