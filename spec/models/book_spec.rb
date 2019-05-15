@@ -49,8 +49,8 @@ RSpec.describe Book, type: :model do
     end
    
     it '.sort_average_rating' do
-      expect(Book.sort_average_rating('ASC').to_a).to eq([@hp_chamber, @hp_order, @hp_sorcerer, @hp_half, @hp_prisoner]) 
-      expect(Book.sort_average_rating('DESC').to_a).to eq([@hp_half, @hp_prisoner, @hp_sorcerer, @hp_order, @hp_chamber]) 
+      expect(Book.sort_average_rating(:asc).to_a).to eq([@hp_chamber, @hp_order, @hp_sorcerer, @hp_half, @hp_prisoner]) 
+      expect(Book.sort_average_rating(:desc).to_a).to eq([@hp_half, @hp_prisoner, @hp_sorcerer, @hp_order, @hp_chamber]) 
     end
 
     it '.sort_number_of_pages' do
@@ -58,8 +58,8 @@ RSpec.describe Book, type: :model do
       expect(Book.sort_number_pages('DESC')).to eq([@hp_prisoner, @hp_sorcerer, @hp_order, @hp_half, @hp_chamber])
     end
 
-    it '.sort_number_of_reviews' do
-      expect(Book.sort_number_reviews('ASC').to_a).to eq([@hp_chamber, @hp_half, @hp_order, @hp_sorcerer, @hp_prisoner])
+    it '.sort_number_of_reviews' do 
+      expect(Book.sort_number_reviews('ASC').to_a).to eq([@hp_prisoner, @hp_sorcerer, @hp_half, @hp_order, @hp_chamber])
       expect(Book.sort_number_reviews('DESC').to_a).to eq([@hp_prisoner, @hp_sorcerer, @hp_half, @hp_order, @hp_chamber])
     end
 
